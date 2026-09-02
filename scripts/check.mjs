@@ -14,10 +14,11 @@ const requiredFiles = [
 
 await Promise.all(requiredFiles.map((file) => access(file, constants.R_OK)));
 
-const [html, css, script] = await Promise.all([
+const [html, css, script, curriculum] = await Promise.all([
   readFile("index.html", "utf8"),
   readFile("styles.css", "utf8"),
-  readFile("app.js", "utf8")
+  readFile("app.js", "utf8"),
+  readFile("curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", "utf8")
 ]);
 
 const checks = [
@@ -30,6 +31,8 @@ const checks = [
   [script.includes("const missions = ["), "mission data"],
   [script.includes("const questQuestions = ["), "playable quest data"],
   [script.includes("const adaptiveModules = ["), "adaptive teacher syllabus"],
+  [curriculum.includes("Format: 6 sessions, 60 minutes each"), "six-session curriculum"],
+  [(curriculum.match(/^### Session \d —/gmu) || []).length === 6, "six curriculum session plans"],
   [script.includes("localStorage"), "local-only progress"],
   [!html.includes("http://") && !html.includes("https://"), "no external page dependencies"]
 ];

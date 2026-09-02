@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const script = await readFile(new URL("../app.js", import.meta.url), "utf8");
+const curriculum = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", import.meta.url), "utf8");
 const vercel = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
 
 test("renders all primary learning surfaces", () => {
@@ -12,8 +13,11 @@ test("renders all primary learning surfaces", () => {
   }
 });
 
-test("includes eight missions and five final quest decisions", () => {
-  assert.equal((script.match(/title: "/g) || []).length >= 13, true);
+test("includes six sessions and five final quest decisions", () => {
+  const missionSource = script.match(/const missions = \[([\s\S]*?)\n\];/u)?.[1] || "";
+  const questSource = script.match(/const questQuestions = \[([\s\S]*?)\n\];/u)?.[1] || "";
+  assert.equal((missionSource.match(/title: "/g) || []).length, 6);
+  assert.equal((questSource.match(/title: "/g) || []).length, 5);
   assert.match(script, /const missions = \[/);
   assert.match(script, /const questQuestions = \[/);
   assert.match(html, /Five decisions/);
@@ -36,10 +40,19 @@ test("uses the requested brand and copyright", () => {
 
 test("includes the adaptive AI Engineering 101 teacher syllabus", () => {
   assert.match(html, /ADAPTIVE SYLLABUS/);
-  assert.match(html, /10-session full course/);
+  assert.match(html, /6 sessions total/);
+  assert.match(html, /60 minutes per class/);
   assert.match(script, /const adaptiveModules = \[/);
   assert.match(script, /The AI Coding Cockpit/);
   assert.match(script, /Debugging Without Panic/);
   assert.match(script, /Five Practice Labs/);
   assert.match(script, /No real payments, cards, production databases, or child accounts/);
+});
+
+test("keeps the web app and downloadable syllabus at six 60-minute sessions", () => {
+  assert.match(html, /Six practical 60-minute sessions/);
+  assert.match(html, /60-MINUTE RHYTHM/);
+  assert.match(curriculum, /Format: 6 sessions, 60 minutes each/);
+  assert.equal((curriculum.match(/^### Session \d —/gmu) || []).length, 6);
+  assert.doesNotMatch(curriculum, /90-minute|90 minutes|Eight-session|8 sessions|Ten-session|10-session|Four-week studio/i);
 });

@@ -1,85 +1,66 @@
-const STORAGE_KEY = "aininja-kids-progress-v1";
+const STORAGE_KEY = "aininja-kids-progress-v2";
+const LEGACY_STORAGE_KEY = "aininja-kids-progress-v1";
 
 const missions = [
   {
     title: "Meet the Robot Puppy",
-    idea: "AI finds patterns quickly, but it can misunderstand and make confident mistakes.",
-    story: "A robot puppy learns to fetch red balls, then fetches a red apple too. It noticed a pattern, not the meaning.",
-    build: "Create a paper sorting robot. Test it with new cards and find one card that breaks its rule.",
+    idea: "AI finds patterns quickly, while the human captain chooses the mission and checks the result.",
+    story: "A robot puppy learns to fetch red balls, then fetches a red apple too. In the AI Coding Cockpit, the child is the captain—not the puppy.",
+    build: "Create a paper sorting robot or Cosmic Hello App. Test it with a new example, fix one thing, and test again.",
     habit: "A pattern is a clue, not proof.",
-    tag: "PATTERN DETECTIVE",
-    explorer: "Use picture cards and explain the rule aloud.",
-    builder: "Create a test table and record false positives."
+    tag: "PATTERN + COCKPIT",
+    explorer: "Use picture cards and a captain-and-robot checklist.",
+    builder: "Define success criteria and record one failed test."
   },
   {
-    title: "Give the Robot a Good Map",
-    idea: "A useful prompt explains the goal, facts, rules, and answer format.",
-    story: "A treasure hunter needs more than “take me there.” A useful map gives a start, steps, turn, and finish.",
-    build: "Repair vague prompts with the GOAL recipe and compare the first and improved results.",
-    habit: "Clear instructions make results easier to test.",
-    tag: "PROMPT MAP",
-    explorer: "Use four color-coded GOAL cards.",
-    builder: "Add constraints and a worked example."
+    title: "Map It, Then Check It",
+    idea: "A useful prompt needs a clear map, and a confident answer still needs a truth check.",
+    story: "A treasure hunter needs a detailed map. A loud parrot may still point to the wrong treasure.",
+    build: "Repair a vague prompt with GOAL, then sort its answer under the red, yellow, or green truth lamp.",
+    habit: "Clear instructions help; evidence decides.",
+    tag: "PROMPT + TRUTH",
+    explorer: "Use four GOAL cards and teacher-provided fact cards.",
+    builder: "Add constraints, verification, a stop rule, and two-source checking."
   },
   {
-    title: "Become a Truth Detective",
-    idea: "AI can sound sure while being wrong, so important answers need evidence.",
-    story: "A confident parrot says the moon is cheese. Saying it loudly does not make it true.",
-    build: "Sort claims under red, yellow, or green lamps, then check two facts with reliable sources.",
-    habit: "“I don’t know yet” is an intelligent answer.",
-    tag: "FACT CHECK",
-    explorer: "Use teacher-provided claims and source cards.",
-    builder: "Compare two sources and explain which is stronger."
+    title: "Protect People and Build Kindly",
+    idea: "Safe engineers protect private information and check whether ideas are fair and kind.",
+    story: "Private details stay in a zipped backpack. A magic crayon must also remember ramps, different people, and kind choices.",
+    build: "Repair an unsafe prompt with fictional details, then create and fairness-check a Kind Story Machine.",
+    habit: "Share only what is needed, and ask who might be missing.",
+    tag: "PRIVACY + FAIRNESS",
+    explorer: "Sort privacy cards and build a kind story with picture pieces.",
+    builder: "Practice data minimization and test the idea from a missing viewpoint."
   },
   {
-    title: "Pack the Privacy Backpack",
-    idea: "Safe engineers decide what information should never enter a system.",
-    story: "Before entering Robot Town, private details go in a zipped backpack—not the robot’s training box.",
-    build: "Sort information into safe, ask an adult, or keep private. Repair an unsafe prompt with fictional details.",
-    habit: "Share only what the job truly needs.",
-    tag: "PRIVACY SHIELD",
-    explorer: "Replace names and places with story characters.",
-    builder: "Practice data minimization and explain each removal."
-  },
-  {
-    title: "Build a Kind Idea Machine",
-    idea: "AI can suggest options, but people must choose what is fair, useful, and kind.",
-    story: "A magic crayon draws playgrounds, but a child notices that some have stairs and no ramp.",
-    build: "Combine idea cards into a story generator, then run a kindness and inclusion check.",
-    habit: "Many ideas still need thoughtful human choices.",
-    tag: "FAIR DESIGN",
-    explorer: "Build with character, goal, obstacle, helper, and ending cards.",
-    builder: "Write a fairness rule and test missing viewpoints."
-  },
-  {
-    title: "Cross with Tiny Steps",
-    idea: "Engineers build one small working piece before adding the next.",
-    story: "We cross a river by placing and testing one stepping stone at a time.",
-    build: "Make a three-question SAFE quiz with a start screen, feedback, score, and ending.",
+    title: "Build in Tiny Loops",
+    idea: "Engineers build, test, debug, and improve one small working piece at a time.",
+    story: "Cross a river one stepping stone at a time. If one stone wobbles, follow its muddy footprints and fix that stone.",
+    build: "Make the three-question SAFE Quiz foundation. Reproduce one bug, fix it, and repeat the same test.",
     habit: "Small working pieces beat one giant unfinished idea.",
-    tag: "QUIZ BUILDER",
-    explorer: "Build with linked slides or Scratch blocks.",
-    builder: "Use variables and a reusable question block."
+    tag: "LOOP + DEBUG",
+    explorer: "Use Show it, Find it, Fix it, Try again cards.",
+    builder: "Use local saving, a test table, and one regression check."
   },
   {
     title: "Build AI Safety Quest",
-    idea: "A useful AI product needs a clear player, testable choices, and guardrails.",
-    story: "Enter Robot City carrying a map, truth lamp, privacy backpack, and kindness shield.",
+    idea: "A useful product starts with one player, one mission, testable choices, and guardrails.",
+    story: "Build one working lemonade stand before drawing a mall. Enter Robot City with a map, truth lamp, privacy backpack, and kindness shield.",
     build: "Create a branching game with five choices, three SAFE lessons, scoring, two endings, and reflection.",
     habit: "Safety belongs inside the design, not in tiny words at the end.",
-    tag: "CAPSTONE BUILD",
+    tag: "PRODUCT + CAPSTONE",
     explorer: "Create one complete playable path, then add a second ending.",
-    builder: "Add reusable blocks, edge cases, or adaptive hints."
+    builder: "Add reusable blocks, mock states, edge cases, or adaptive hints."
   },
   {
-    title: "Shake the Bridge",
-    idea: "Engineers search for failures, learn from testers, and improve the most important problem.",
-    story: "A bridge builder tests with toy elephants, mice, and wind before people cross.",
-    build: "Watch another child play silently, record confusion, fix one issue, retest, and present.",
+    title: "Test, Ship, and Showcase",
+    idea: "Engineers use testers and a second pair of robot eyes, then show proof that the project works.",
+    story: "A bridge builder tests with toy elephants, mice, wind, and a checker robot before people cross.",
+    build: "Watch another child play, compare one reviewer opinion, fix the most important issue, retest, and present the evidence.",
     habit: "A bug is a clue that helps the next version.",
-    tag: "TEST LAB",
+    tag: "REVIEW + SHIP",
     explorer: "Use the seven-question peer test sheet.",
-    builder: "Add edge cases and explain one design trade-off."
+    builder: "Add edge cases, a shipping checklist, and one explained design trade-off."
   }
 ];
 
@@ -102,7 +83,7 @@ const adaptiveModules = [
     explorer: "Say the mission in one sentence and use a picture checklist: folder, inspect, tiny build, open, fix, retest.",
     builder: "Write success criteria before any code changes, then record evidence for each criterion.",
     safety: "A teacher manages coding tools and accounts. Learners use fictional names and content.",
-    time: "70 MIN BUILD"
+    time: "SESSION 1"
   },
   {
     title: "The Loop",
@@ -112,7 +93,7 @@ const adaptiveModules = [
     explorer: "Tell the robot what to build, watch it build, try it, and ask it to fix one thing.",
     builder: "Use the seven-step loop and define the next test before making another change.",
     safety: "Stop the loop when the goal changes, private data appears, or adult approval is needed.",
-    time: "65 MIN BUILD"
+    time: "ALL SESSIONS"
   },
   {
     title: "Prompt Engineering That Works",
@@ -122,7 +103,7 @@ const adaptiveModules = [
     explorer: "Use the four-part GOAL recipe and one example of the answer you want.",
     builder: "Add constraints, verification steps, and a clear stop rule to the project brief.",
     safety: "Prompts use invented data, never secrets, faces, voices, school details, or payment information.",
-    time: "60 MIN BUILD"
+    time: "SESSION 2"
   },
   {
     title: "A Second Pair of Robot Eyes",
@@ -132,7 +113,7 @@ const adaptiveModules = [
     explorer: "Role-play two paper robots: Builder and Checker. The teacher operates any real AI tools.",
     builder: "Use teacher-approved Codex, Claude Code, or Fable 5, then resolve disagreements with tests—not votes.",
     safety: "External agents are teacher-managed. Never paste private student work, credentials, or unpublished personal material.",
-    time: "55 MIN PRACTICE"
+    time: "SESSIONS 2 + 6"
   },
   {
     title: "Debugging Without Panic",
@@ -142,7 +123,7 @@ const adaptiveModules = [
     explorer: "Use four cards: Show it, Find it, Fix it, Try it again.",
     builder: "Write a reproducible test, isolate the smallest broken unit, patch it, and add a regression check.",
     safety: "Use prepared demo bugs. Do not experiment on live accounts, payments, school systems, or other people’s data.",
-    time: "70 MIN BUILD"
+    time: "SESSION 4"
   },
   {
     title: "Shipping a Real Project",
@@ -152,7 +133,7 @@ const adaptiveModules = [
     explorer: "Swap devices with a partner and use a picture-based six-check launch card.",
     builder: "Run automated checks, document known limits, and create a clean Git commit with verified scope.",
     safety: "Teacher approval is required before public sharing. Do not publish a child’s name, image, voice, or location.",
-    time: "65 MIN TEST"
+    time: "SESSION 6"
   },
   {
     title: "Building Tiny SaaS and Web Apps",
@@ -162,7 +143,7 @@ const adaptiveModules = [
     explorer: "Build a clickable paper or slide prototype with no real login or payment.",
     builder: "Use local-only data and a mock checkout state; map where Supabase, Stripe, and Vercel could connect later.",
     safety: "No real payments, cards, production databases, or child accounts are used in class.",
-    time: "75 MIN BUILD"
+    time: "SESSIONS 4 + 5"
   },
   {
     title: "The Teacher Loop",
@@ -172,7 +153,7 @@ const adaptiveModules = [
     explorer: "Use one metaphor, one demonstration, and one learner-created result.",
     builder: "Add success criteria, an edge case, peer feedback, and one measured improvement.",
     safety: "Praise thinking and iteration, not speed or a perfect AI answer. Always keep a non-AI path available.",
-    time: "60 MIN PRACTICE"
+    time: "TEACHER ROUTINE"
   },
   {
     title: "Five Practice Labs",
@@ -182,7 +163,7 @@ const adaptiveModules = [
     explorer: "Complete Cosmic Hello, Habit Rocket, or Bug Detective with a partner and show one proof.",
     builder: "Complete Mini SaaS Studio or a structured risk review with success criteria, top risks, fixes, and verification evidence.",
     safety: "Use local sample data and mock services. The teacher owns any agent access and approves all public publishing.",
-    time: "75 MIN BUILD"
+    time: "LAB CHOICES"
   }
 ];
 
@@ -257,11 +238,24 @@ let toastTimer;
 
 function loadState() {
   try {
-    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const current = localStorage.getItem(STORAGE_KEY);
+    const legacy = !current ? localStorage.getItem(LEGACY_STORAGE_KEY) : null;
+    const stored = JSON.parse(current || legacy || "null");
+    const legacyCompleted = Array.isArray(stored?.completed) ? stored.completed : [];
+    const migratedCompleted = legacy
+      ? [
+          legacyCompleted.includes(0),
+          legacyCompleted.includes(1) && legacyCompleted.includes(2),
+          legacyCompleted.includes(3) && legacyCompleted.includes(4),
+          legacyCompleted.includes(5),
+          legacyCompleted.includes(6),
+          legacyCompleted.includes(7)
+        ].flatMap((complete, index) => complete ? [index] : [])
+      : legacyCompleted.filter((index) => Number.isInteger(index) && index >= 0 && index < missions.length);
     return {
       ...defaultState,
       ...stored,
-      completed: Array.isArray(stored?.completed) ? stored.completed : [],
+      completed: migratedCompleted,
       capstoneChecks: Array.isArray(stored?.capstoneChecks) ? stored.capstoneChecks : []
     };
   } catch {
@@ -307,7 +301,7 @@ function navigate(view) {
 
   const labels = {
     home: "Mission Control",
-    missions: "8 Missions",
+    missions: "6 Sessions",
     projects: "Project Lab",
     safety: "SAFE Lab",
     quest: "Final Quest",
@@ -324,7 +318,7 @@ function navigate(view) {
 function renderMissionPath() {
   document.getElementById("mission-path").innerHTML = missions.map((_, index) => {
     const complete = appState.completed.includes(index);
-    return `<button type="button" class="path-node ${complete ? "is-complete" : ""}" data-path-mission="${index}" aria-label="Open mission ${index + 1}${complete ? ", complete" : ""}">${complete ? "✓" : String(index + 1).padStart(2, "0")}</button>`;
+    return `<button type="button" class="path-node ${complete ? "is-complete" : ""}" data-path-mission="${index}" aria-label="Open session ${index + 1}${complete ? ", complete" : ""}">${complete ? "✓" : String(index + 1).padStart(2, "0")}</button>`;
   }).join("");
 
   const total = appState.completed.length;
@@ -343,7 +337,7 @@ function renderMissions() {
         <div class="mission-copy">
           <h2>${mission.title}</h2>
           <p>${mission.idea}</p>
-          <div class="mission-meta"><span>90 MIN</span><span>${mission.tag}</span><span>${trackLabel.toUpperCase()}</span></div>
+          <div class="mission-meta"><span>60 MIN</span><span>${mission.tag}</span><span>${trackLabel.toUpperCase()}</span></div>
         </div>
         <div class="mission-actions">
           <button class="details-button" type="button" data-details="${index}" aria-expanded="false">View plan</button>
@@ -403,10 +397,10 @@ function toggleMission(index) {
   const completed = new Set(appState.completed);
   if (completed.has(index)) {
     completed.delete(index);
-    showToast(`Mission ${index + 1} moved back to in progress.`);
+    showToast(`Session ${index + 1} moved back to in progress.`);
   } else {
     completed.add(index);
-    showToast(`Mission ${index + 1} complete. Nice testing.`);
+    showToast(`Session ${index + 1} complete. Nice testing.`);
   }
   appState.completed = [...completed].sort((a, b) => a - b);
   saveState();

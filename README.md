@@ -6,13 +6,13 @@ A project-first AI safety and engineering course for learners ages 10–16, bran
 
 - Mission-control dashboard with device-local progress
 - Explorer (10–12) and Builder (13–16) tracks
-- Eight practical, story-led missions
+- Six practical, story-led 60-minute sessions
 - Seven optional project cards
 - Local-only SAFE prompt checker
 - GOAL prompt builder
 - Playable five-challenge AI Safety Quest
 - Capstone checklist and teacher guide
-- Adaptive AI Engineering 101 syllabus with three delivery formats
+- Adaptive AI Engineering 101 topics mapped into the six-session syllabus
 - Downloadable full curriculum
 
 The app has no sign-in, analytics, AI connection, or child data collection. It is intentionally static and can run without external services.

@@ -22,7 +22,7 @@ The larger goal is not to make children memorize technical words. It is to help 
 ## Audience and delivery
 
 - Ages: 10-16
-- Format: 8 sessions, 90 minutes each
+- Format: 6 sessions, 60 minutes each
 - Grouping: pairs or teams of three
 - Practice-to-theory ratio: about 80% building and 20% explanation
 - Required experience: none
@@ -81,51 +81,53 @@ Call this the **Build-a-Bridge Loop**:
 
 Avoid beginning with words such as “model,” “algorithm,” or “inference.” Teach the idea first through the story, then offer the correct term as an optional label.
 
-## Standard 90-minute session rhythm
+## Standard 60-minute session rhythm
 
 Use the same rhythm every time so learners know what comes next.
 
 | Time | Activity | Purpose |
 | --- | --- | --- |
-| 0-10 min | Story and movement game | Introduce one idea without a lecture. |
-| 10-20 min | Teacher demonstration | Show the idea, including one deliberate mistake. |
-| 20-65 min | Build challenge | Learners make something in pairs or teams. |
-| 65-78 min | Swap and test | Another team tries to break or improve it. |
-| 78-86 min | Fix one thing | Learners use feedback and test again. |
-| 86-90 min | Exit ticket | Say: “I built…, I checked…, Next I would…” |
+| 0-4 min | Story and movement game | Introduce one memorable idea without a lecture. |
+| 4-10 min | Teacher demonstration | Show the idea, including one deliberate mistake. |
+| 10-44 min | Build challenge | Learners make something in pairs or teams. |
+| 44-52 min | Swap and test | Another team tries to break or improve it. |
+| 52-58 min | Fix one thing | Learners use feedback and test again. |
+| 58-60 min | Exit ticket | Say: “I built…, I checked…, Next I would…” |
 
-No uninterrupted explanation should run longer than ten minutes.
+This keeps 48 of 60 minutes practical. No uninterrupted explanation should run longer than six minutes.
 
-## Eight-session curriculum
+## Six-session curriculum
 
 ### Session 1 — Meet the Robot Puppy
 
-**Big idea:** AI is a tool that predicts an answer from patterns. It can help, but it can also make mistakes.
+**Big idea:** AI predicts answers from patterns. The child is the captain who chooses the mission and checks the result.
 
-**Story:** The robot puppy fetches a red ball correctly three times, then sees a red apple and brings it too. It learned a pattern, not the real meaning of “ball.”
+**Story:** The robot puppy fetches a red ball correctly three times, then brings a red apple too. In the AI Coding Cockpit, the child is the captain and the puppy is a fast helper.
 
-**Build:** Create a paper “sorting robot.” One learner invents a rule for sorting picture cards. Their partner tries to discover the rule and find a card that breaks it.
+**Build:** Explorer learners make a paper sorting robot. Builder learners make a Cosmic Hello App with one input, one button, and one visible result.
 
 **Steps:**
 
-1. Pick a simple sorting job.
-2. Show the robot three examples.
-3. Test it with five new cards.
-4. Circle wrong or uncertain answers.
-5. Improve the examples or rule.
-6. Explain why the robot made its mistake.
+1. Say the mission in one sentence.
+2. Show the helper two or three examples.
+3. Make the smallest version work.
+4. Test it with one new or unusual example.
+5. Fix one thing.
+6. Repeat the same test and explain the evidence.
 
-**Mini-project:** Pattern Detective poster: “What the robot noticed, what it missed, and how we helped.”
+**Mini-project:** Pattern Detective or Cosmic Hello App.
 
 **Thinking habit:** A pattern is a clue, not proof.
 
-### Session 2 — Give the Robot a Good Map
+**Adaptive topics:** The AI Coding Cockpit, The Loop, and Cosmic Hello.
 
-**Big idea:** A useful prompt describes the job, important context, rules, and the shape of the answer.
+### Session 2 — Map It, Then Check It
 
-**Story:** A treasure hunter says, “Take me there.” A better map says, “Start at the blue tree, take five steps, turn left, and stop at the rock.”
+**Big idea:** A useful prompt gives the robot a clear map. A confident answer still needs a truth check.
 
-**Build:** Teams turn vague instructions into clear prompt cards.
+**Story:** A treasure hunter needs more than “take me there.” A loud parrot can also point toward the wrong treasure, so the map and the answer both need checking.
+
+**Build:** Teams repair a vague prompt with GOAL, then inspect its answer with the Three-Lamp Check.
 
 Use the **GOAL** prompt recipe:
 
@@ -141,101 +143,78 @@ Use the **GOAL** prompt recipe:
 3. Add the learner’s age and what they already know.
 4. Add one safety or accuracy rule.
 5. Ask for a format, such as three bullets or a tiny story.
-6. Compare the first and second answers.
-
-**Mini-project:** Prompt Recipe Card for explaining a school topic to a younger child.
-
-**Thinking habit:** Clear instructions make results easier to test.
-
-### Session 3 — Truth Detective
-
-**Big idea:** AI can sound sure while being wrong. Important answers need evidence.
-
-**Story:** A confident parrot repeats, “The moon is made of cheese.” Confidence makes the sentence louder, not truer.
-
-**Build:** Teams inspect a mixed set of real, false, silly, and uncertain statements. They label each one **checked**, **needs checking**, or **opinion**.
+6. Mark the answer red, yellow, or green.
+7. Check one important claim with a reliable source or teacher.
 
 Use the **Three-Lamp Check**:
 
-1. **Red:** Could this answer hurt someone or affect health, money, safety, or reputation? Stop and ask an adult or expert.
-2. **Yellow:** Is it a fact without a source, a surprising claim, or something very new? Check it.
-3. **Green:** Is it a creative suggestion with no serious consequence? Explore, while still being kind.
+1. **Red:** The answer could affect health, money, safety, or reputation. Stop and ask an adult or expert.
+2. **Yellow:** It is a surprising, new, or unsourced fact. Check it.
+3. **Green:** It is a low-stakes creative suggestion. Explore while staying kind.
 
-**Mini-project:** Fact-check card with the claim, two checks, a conclusion, and what remains uncertain.
+**Mini-project:** GOAL Prompt Map plus one Fact-Check Card.
 
-**Thinking habit:** “I don’t know yet” is an intelligent answer.
+**Thinking habit:** Clear instructions help; evidence decides. “I don’t know yet” is an intelligent answer.
 
-### Session 4 — The Privacy Backpack
+**Adaptive topics:** Prompt Engineering That Works and A Second Pair of Robot Eyes.
 
-**Big idea:** Safe engineers decide what information should never enter the system.
+### Session 3 — Protect People and Build Kindly
 
-**Story:** Before visiting Robot Town, a child packs secrets into a zipped backpack and carries only a nickname, a made-up character, and the question they want answered.
+**Big idea:** Safe engineers protect private information and choose ideas that are fair, useful, and kind.
 
-**Build:** Sort example information into **safe to share**, **ask an adult**, and **keep private**. Then repair unsafe prompts by replacing real details with invented ones.
+**Story:** Private details stay inside a zipped backpack. A magic crayon can draw ten playgrounds, but a thoughtful child checks whether everyone can use them.
 
-**Steps:**
-
-1. Highlight personal information.
-2. Remove details that are not needed.
-3. Replace real names and places with fictional ones.
-4. Run the SAFE check.
-5. Ask: “Could this embarrass, identify, or hurt anyone?”
-
-**Mini-project:** A privacy shield for a fictional study helper.
-
-**Thinking habit:** Collect and share only what the job truly needs.
-
-### Session 5 — Build a Kind Idea Machine
-
-**Big idea:** AI can help us imagine many options, but people choose what is fair, useful, and kind.
-
-**Story:** A magic crayon draws ten playgrounds. Some are beautiful, but only a child using a wheelchair notices that three have stairs and no ramp.
-
-**Build:** Design a story or character idea generator using cards, a spinner, Scratch lists, or a teacher-approved AI tool.
+**Build:** Repair an unsafe prompt with fictional details, then create and fairness-check a Kind Story Machine.
 
 **Steps:**
 
-1. Define who the creation is for.
-2. Ask for five different ideas.
-3. Look for repeated ideas or missing people.
-4. Add a fairness rule.
-5. Choose and combine the best parts.
-6. Credit human and AI contributions honestly.
+1. Highlight personal or unnecessary information.
+2. Remove it or replace it with invented details.
+3. Run the SAFE check.
+4. Build a story from hero, goal, obstacle, helper, and ending cards.
+5. Ask who is included, who is missing, and whether any choice could hurt someone.
+6. Improve one part and explain the human decision.
 
-**Mini-project:** Kind Story Machine with a hero, goal, obstacle, helper, and fair ending.
+**Mini-project:** Privacy Shield plus Kind Story Machine.
 
-**Thinking habit:** More ideas are useful only when we choose thoughtfully.
+**Thinking habit:** Share only what the job needs, and ask who might be missing.
 
-### Session 6 — From Big Problem to Tiny Steps
+**Adaptive topics:** Privacy, fairness, and an optional teacher-led risk review.
 
-**Big idea:** Engineers make hard jobs smaller, build one piece, and test it before adding more.
+### Session 4 — Build in Tiny Loops
 
-**Story:** We do not leap across a river. We place one stepping stone, test it, and then place the next.
+**Big idea:** Engineers build, test, debug, and improve one small working piece at a time.
 
-**Build:** Make a tiny playable quiz with a start screen, three questions, feedback, and an ending.
+**Story:** Cross a river one stepping stone at a time. If one stone wobbles, make the bug show itself and follow its muddy footprints.
+
+**Build:** Create the required three-question SAFE Quiz that will become the first playable path of the final AI Safety Quest.
 
 **Steps:**
 
 1. Write the player’s goal.
-2. Draw each screen on paper.
+2. Draw the start, three questions, feedback, score, and ending.
 3. Build only the start and first question.
-4. Test the buttons or blocks.
-5. Add scoring.
-6. Add two more questions.
-7. Ask another team to find one bug.
-8. Fix the smallest important bug first.
+4. Test the click path.
+5. Add the remaining questions and score.
+6. Reproduce one bug.
+7. Fix the smallest cause.
+8. Repeat the same test.
 
-**Mini-project:** Three-question SAFE Quiz.
+**Mini-project:** Three-question SAFE Quiz—the capstone foundation.
 
 **Thinking habit:** Small working pieces beat one giant unfinished idea.
 
-### Session 7 — Capstone Build: AI Safety Quest
+**Adaptive topics:** The Loop, Debugging Without Panic, Building Tiny Apps, and Practice Labs.
 
-**Big idea:** A good AI product needs a clear user, useful choices, testing, and guardrails.
+**Alternative:** Habit Rocket may replace the quiz only when the teacher provides a ready-made AI Safety Quest starter for Session 5.
 
-**Story:** The player enters Robot City with four tools: a map, a truth lamp, a privacy backpack, and a kindness shield.
+### Session 5 — Build AI Safety Quest
 
-**Game brief:** Build a branching adventure in which the player helps a friendly robot complete a mission. Each decision teaches a safe AI habit.
+**Big idea:** A useful product starts with one player, one mission, testable choices, and guardrails.
+
+**Story:** Build one working lemonade stand before drawing a giant shopping mall. The player enters Robot City with a map, truth lamp, privacy backpack, and kindness shield.
+
+**Build:** Expand the Session 4 quiz into a branching AI Safety Quest.
 
 Required game features:
 
@@ -250,26 +229,30 @@ Required game features:
 - At least two endings
 - A final reflection: “What will you do before trusting AI?”
 
-**Build steps:**
+**Steps:**
 
 1. Choose a mission: rescue a library, prepare a space trip, solve a mystery, or protect a magical forest.
-2. Name the player and describe what success means.
-3. Draw the decision path on paper.
-4. Mark where each SAFE rule appears.
-5. Build the smallest playable path.
-6. Add feedback for good and unsafe choices.
-7. Add score and endings.
-8. Test with another team using the test sheet below.
+2. Reuse the working quiz path from Session 4.
+3. Add two decisions so the game has at least five.
+4. Mark where privacy, truth, and kindness appear.
+5. Add the second ending and final reflection.
+6. Test every choice once.
 
 **Core-track tool:** Scratch or presentation slides with linked buttons.
 
 **Stretch-track option:** Use variables, reusable blocks, a question bank, or teacher-approved AI-generated hints. AI must never ask the player for personal information.
 
-### Session 8 — Test Lab, Improve, and Showcase
+**Thinking habit:** Safety belongs inside the design, not in tiny words at the end.
 
-**Big idea:** Engineers do not prove that their creation is perfect. They search for where it fails and make it better.
+**Adaptive topics:** Building Tiny SaaS and Web Apps, The Loop, and Practice Labs.
 
-**Story:** A bridge builder sends toy elephants, mice, and a windy fan across the bridge before people use it.
+### Session 6 — Test, Ship, and Showcase
+
+**Big idea:** Engineers use testers and a second pair of robot eyes, then show proof that the project works.
+
+**Story:** A bridge builder tests with toy elephants, mice, wind, and a checker robot before people cross.
+
+**Build:** Peer-test AI Safety Quest, compare one reviewer opinion, fix the most important issue, retest, and present.
 
 **Team test sheet:**
 
@@ -283,18 +266,23 @@ Required game features:
 | Edge-case test | What happens if a player repeats, skips, or chooses an unexpected path? |
 | Learning test | Can the player name one SAFE rule afterward? |
 
-**Final steps:**
+**Steps:**
 
 1. Observe another child playing silently.
 2. Write down where they pause or become confused.
-3. Ask what they learned; do not explain the intended answer first.
+3. Ask a second reviewer for risks, but treat the opinion as a clue rather than proof.
 4. Choose the most important problem.
-5. Fix it and test again.
-6. Present the game in three minutes.
+5. Fix it and repeat the same test.
+6. Run the shipping checklist: app opens, buttons work, text is readable, private data is absent, and limits are explained.
+7. Present the game in three minutes.
 
 **Showcase sentence frame:**
 
 > We built ___ for ___. The hardest problem was ___. Our safety guardrail is ___. A tester found ___. We improved it by ___.
+
+**Thinking habit:** A bug is a clue that helps the next version.
+
+**Adaptive topics:** A Second Pair of Robot Eyes, Shipping a Real Project, and The Teacher Loop.
 
 ## Optional project bank
 
@@ -345,33 +333,39 @@ Completion target: mostly level 3. Level 4 is an optional stretch, not the price
 
 ## Adaptive AI Engineering 101 syllabus
 
-These modules are an adaptive engineering layer for the eight-mission safety course. Use the same idea with two depths: the Explorer track for ages 10–12 uses pictures, metaphors, paired work, and guided steps; the Builder track for ages 13–16 adds success criteria, stronger testing, written evidence, and optional teacher-managed coding agents.
+These nine topics are teaching ingredients folded into the six-session safety course; they are not nine extra classes. Use the same idea with two depths: the Explorer track for ages 10–12 uses pictures, metaphors, paired work, and guided steps; the Builder track for ages 13–16 adds success criteria, stronger testing, written evidence, and optional teacher-managed coding agents.
 
 ### Course structure
 
-1. **Safe foundations — Missions 1–4:** patterns, instructions, truth checking, and privacy.
-2. **Engineer habits — Missions 5–6:** kind design, tiny steps, prompting, debugging, and proof.
-3. **Build and ship — Missions 7–8:** create AI Safety Quest, test unusual paths, improve it, and present the evidence.
+| Session | Core focus | Adaptive topics | Practical outcome |
+| --- | --- | --- | --- |
+| 1 | Meet the Robot Puppy | AI Coding Cockpit and Loop introduction | Test a pattern helper or Cosmic Hello App and improve one result. |
+| 2 | Map It, Then Check It | Prompt Engineering and Second Pair of Robot Eyes | Repair a GOAL prompt and verify its answer. |
+| 3 | Protect People and Build Kindly | Privacy, fairness, and optional risk review | Repair unsafe data and build an inclusive idea. |
+| 4 | Build in Tiny Loops | Loop, Debugging, Tiny Apps, and Practice Labs | Build the three-question SAFE Quiz as the capstone’s first playable path. |
+| 5 | Build AI Safety Quest | Tiny Apps, Loop, and debugging | Expand the quiz into a five-choice, two-ending game. |
+| 6 | Test, Ship, and Showcase | Second Pair of Robot Eyes and Shipping | Peer-test, fix, verify, and present the game. |
 
-Suggested delivery formats:
+Delivery contract:
 
-- **120-minute sampler:** The AI Coding Cockpit, The Loop, and the Cosmic Hello App.
-- **Four-week studio:** two 90-minute practical sessions per week.
-- **Ten-session full course:** one session for each of the nine modules below, followed by a final showcase.
+- **Six classes total:** run weekly, twice weekly, or as two classes per day in a three-day camp.
+- **Sixty minutes per class:** four minutes of story, six minutes of demonstration, 48 minutes of building/testing/fixing, and a two-minute exit ticket.
+- **Six hours total:** Session 4 creates the capstone foundation, Session 5 completes it, and Session 6 tests and presents it.
+- **Teacher Loop:** use it as the facilitation rhythm in all six classes, not as a seventh learner session.
 
 ### The nine adaptive modules
 
-| Module | Child-friendly idea | Practical build | Explorer, ages 10–12 | Builder, ages 13–16 |
-| --- | --- | --- | --- | --- |
-| 1. The AI Coding Cockpit | The human captain chooses the mission; robot helpers work and check. | Cosmic Hello App with one input, button, and visible result. | Use a picture checklist: folder, inspect, tiny build, open, fix, retest. | Define success criteria before code changes and record evidence. |
-| 2. The Loop | Plant, look, water, check, and care for the next leaf. | Improve the Hello App through three tiny loops. | Tell the robot, watch it, try it, and fix one thing. | Ask, inspect, plan, patch, test, reflect, and repeat. |
-| 3. Prompt Engineering That Works | A treasure map needs a goal, starting point, limits, landmarks, proof, and a stop. | Turn “Make me an app” into a testable kids habit-tracker brief. | Use the four-part GOAL recipe and one example. | Add context, constraints, examples, verification, and a stop rule. |
-| 4. A Second Pair of Robot Eyes | One robot builds the bridge; another gently shakes it. | Compare a builder answer with a reviewer answer. | Role-play Builder and Checker on paper. | Use teacher-approved Codex, Claude Code, or Fable 5 and settle disagreement with tests. |
-| 5. Debugging Without Panic | Make the bug show itself, then follow its footprints. | Reproduce and fix one prepared bug, then add a return-check. | Use Show it, Find it, Fix it, Try again cards. | Write a reproducible test and a regression check. |
-| 6. Shipping a Real Project | A project is done when another person can use it. | Check opening, buttons, readability, README, secrets, and proof. | Swap devices and use a picture launch card. | Run automated checks, document limits, and make a clean commit. |
-| 7. Building Tiny SaaS and Web Apps | Build one lemonade stand before drawing a giant mall. | Prototype one dashboard flow with sample data and a pretend plan selector. | Use linked paper or slides with no real login or payment. | Use local data and mock checkout; map later Supabase, Stripe, and Vercel connections. |
-| 8. The Teacher Loop | Teach one dance step before adding the next. | Rehearse a ten-minute story-plus-build micro-lesson. | Use one metaphor, demo, and learner-created result. | Add criteria, an edge case, peer feedback, and one improvement. |
-| 9. Five Practice Labs | Earn skill badges through small missions, not a giant scroll. | Cosmic Hello, Habit Rocket, Bug Detective, Mini SaaS Studio, or a teacher-led Fable 5 Risk Review. | Complete a guided lab with a partner and show one proof. | Complete a structured build or risk review with verification evidence. |
+| Module | Placement | Child-friendly idea | Practical build | Explorer, ages 10–12 | Builder, ages 13–16 |
+| --- | --- | --- | --- | --- | --- |
+| 1. The AI Coding Cockpit | Session 1 | The human captain chooses the mission; robot helpers work and check. | Cosmic Hello App with one input, button, and visible result. | Use a picture checklist: folder, inspect, tiny build, open, fix, retest. | Define success criteria before code changes and record evidence. |
+| 2. The Loop | All sessions | Plant, look, water, check, and care for the next leaf. | Improve each build through small loops. | Tell the robot, watch it, try it, and fix one thing. | Ask, inspect, plan, patch, test, reflect, and repeat. |
+| 3. Prompt Engineering That Works | Session 2 | A treasure map needs a goal, starting point, limits, landmarks, proof, and a stop. | Turn “Make me an app” into a testable kids habit-tracker brief. | Use the four-part GOAL recipe and one example. | Add context, constraints, examples, verification, and a stop rule. |
+| 4. A Second Pair of Robot Eyes | Sessions 2 and 6 | One robot builds the bridge; another gently shakes it. | Compare a builder answer with a reviewer answer. | Role-play Builder and Checker on paper. | Use teacher-approved Codex, Claude Code, or Fable 5 and settle disagreement with tests. |
+| 5. Debugging Without Panic | Session 4 | Make the bug show itself, then follow its footprints. | Reproduce and fix one prepared bug, then add a return-check. | Use Show it, Find it, Fix it, Try again cards. | Write a reproducible test and a regression check. |
+| 6. Shipping a Real Project | Session 6 | A project is done when another person can use it. | Check opening, buttons, readability, README, secrets, and proof. | Swap devices and use a picture launch card. | Run automated checks, document limits, and make a clean commit. |
+| 7. Building Tiny SaaS and Web Apps | Sessions 4 and 5 | Build one lemonade stand before drawing a giant mall. | Prototype one dashboard flow with sample data and a pretend plan selector. | Use linked paper or slides with no real login or payment. | Use local data and mock checkout; map later Supabase, Stripe, and Vercel connections. |
+| 8. The Teacher Loop | Every session | Teach one dance step before adding the next. | Use the story, demo, build, test, fix, and exit rhythm. | Use one metaphor, demo, and learner-created result. | Add criteria, an edge case, peer feedback, and one improvement. |
+| 9. Five Practice Labs | Lab choices | Earn skill badges through small missions, not a giant scroll. | Cosmic Hello, Habit Rocket, Bug Detective, Mini SaaS Studio, or a teacher-led Fable 5 Risk Review. | Complete a guided lab with a partner and show one proof. | Complete a structured build or risk review with verification evidence. |
 
 Every module ends with the same three pieces of proof:
 
