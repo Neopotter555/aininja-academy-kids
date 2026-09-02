@@ -9,16 +9,18 @@ const requiredFiles = [
   "manifest.webmanifest",
   "assets/aininja-logo.jpg",
   "assets/og.png",
-  "curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md"
+  "curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md",
+  "curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf"
 ];
 
 await Promise.all(requiredFiles.map((file) => access(file, constants.R_OK)));
 
-const [html, css, script, curriculum] = await Promise.all([
+const [html, css, script, curriculum, curriculumPdf] = await Promise.all([
   readFile("index.html", "utf8"),
   readFile("styles.css", "utf8"),
   readFile("app.js", "utf8"),
-  readFile("curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", "utf8")
+  readFile("curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", "utf8"),
+  readFile("curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf")
 ]);
 
 const checks = [
@@ -38,6 +40,8 @@ const checks = [
   [curriculum.includes("Format: 6 sessions, 60 minutes each"), "six-session curriculum"],
   [curriculum.includes("Special Codex access rule"), "downloadable Codex age rule"],
   [curriculum.includes("Shared-device progress rule"), "downloadable device rule"],
+  [html.includes("AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf"), "PDF curriculum download"],
+  [curriculumPdf.subarray(0, 5).toString() === "%PDF-" && curriculumPdf.length > 100000, "valid designed curriculum PDF"],
   [(curriculum.match(/^### Session \d —/gmu) || []).length === 6, "six curriculum session plans"],
   [script.includes("localStorage"), "local-only progress"],
   [!html.includes("http://") && !html.includes("https://"), "no external page dependencies"]

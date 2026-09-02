@@ -5,6 +5,7 @@ import { readFile } from "node:fs/promises";
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const script = await readFile(new URL("../app.js", import.meta.url), "utf8");
 const curriculum = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", import.meta.url), "utf8");
+const curriculumPdf = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf", import.meta.url));
 const vercel = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
 
 test("renders all primary learning surfaces", () => {
@@ -86,4 +87,12 @@ test("provides quick Teacher Base access and six complete teaching plans", () =>
   assert.match(script, /LEARNER PROOF/);
   assert.match(curriculum, /What you need before class/);
   assert.match(curriculum, /Shared-device progress rule/);
+});
+
+test("downloads a designed PDF curriculum instead of Markdown", () => {
+  assert.match(html, /href="\/curriculum\/AI_ENGINEER_FOR_KIDS_CURRICULUM\.pdf"/);
+  assert.match(html, /download="AI_Ninja_Academy_Kids_Teacher_Curriculum\.pdf"/);
+  assert.doesNotMatch(html, /href="\/curriculum\/AI_ENGINEER_FOR_KIDS_CURRICULUM\.md"/);
+  assert.equal(curriculumPdf.subarray(0, 5).toString(), "%PDF-");
+  assert.ok(curriculumPdf.length > 100000);
 });

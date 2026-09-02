@@ -2,3 +2,4 @@
 .vercel
 npm-debug.log*
 .env*
+tmp/
