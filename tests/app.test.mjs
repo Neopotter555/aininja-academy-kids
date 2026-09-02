@@ -48,6 +48,20 @@ test("uses the robot in the hero while preserving the top-left logo", () => {
   }
 });
 
+test("evolves the hero with a lightweight accessible AI engineering orbit", () => {
+  assert.match(html, /id="learning-orbit-canvas" aria-hidden="true"/);
+  assert.match(html, /AI ENGINEERING LOOP/);
+  assert.match(script, /function setupLearningOrbit\(\)/);
+  assert.match(script, /prefers-reduced-motion: reduce/);
+  assert.match(script, /IntersectionObserver/);
+});
+
+test("uses the supplied AI Ninja robot puppy artwork in the story card", () => {
+  assert.match(html, /src="\/assets\/ai-ninja-robot-puppy\.png"/);
+  assert.match(html, /alt="Friendly AI Ninja robot puppy"/);
+  assert.doesNotMatch(html, />🐕<\/div>/);
+});
+
 test("includes the adaptive AI Engineering 101 teacher syllabus", () => {
   assert.match(html, /ADAPTIVE SYLLABUS/);
   assert.match(html, /6 sessions total/);

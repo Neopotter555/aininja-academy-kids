@@ -739,12 +739,107 @@ document.querySelectorAll("[data-capstone-check]").forEach((checkbox) => {
   });
 });
 
+function setupLearningOrbit() {
+  const canvas = document.getElementById("learning-orbit-canvas");
+  if (!canvas || !canvas.getContext) return;
+
+  const context = canvas.getContext("2d");
+  if (!context) return;
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const particles = Array.from({ length: 42 }, (_, index) => ({
+    angle: (index / 42) * Math.PI * 2,
+    radius: 0.72 + ((index * 17) % 29) / 100,
+    size: 0.7 + ((index * 11) % 15) / 10,
+    speed: 0.08 + ((index * 7) % 13) / 100,
+    warm: index % 4 !== 0,
+  }));
+  let width = 0;
+  let height = 0;
+  let pixelRatio = 1;
+  let animationFrame = 0;
+  let isVisible = true;
+
+  function resizeOrbit() {
+    const bounds = canvas.getBoundingClientRect();
+    width = Math.max(1, bounds.width);
+    height = Math.max(1, bounds.height);
+    pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+    canvas.width = Math.round(width * pixelRatio);
+    canvas.height = Math.round(height * pixelRatio);
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  }
+
+  function drawOrbit(milliseconds = 0) {
+    const time = reducedMotion ? 0 : milliseconds / 1000;
+    const centerX = width * 0.5;
+    const centerY = height * 0.35;
+    const radiusX = Math.min(width * 0.48, 330);
+    const radiusY = Math.min(height * 0.32, 210);
+
+    context.clearRect(0, 0, width, height);
+
+    const glow = context.createRadialGradient(centerX, centerY, 10, centerX, centerY, radiusX);
+    glow.addColorStop(0, "rgba(255, 74, 22, 0.12)");
+    glow.addColorStop(0.42, "rgba(255, 74, 22, 0.035)");
+    glow.addColorStop(1, "rgba(0, 0, 0, 0)");
+    context.fillStyle = glow;
+    context.fillRect(0, 0, width, height);
+
+    for (let ring = 0; ring < 4; ring += 1) {
+      const rotation = time * (0.035 + ring * 0.012) + ring * 0.74;
+      context.beginPath();
+      context.ellipse(centerX, centerY, radiusX - ring * 22, radiusY - ring * 13, -0.2, rotation, rotation + Math.PI * (0.72 + ring * 0.08));
+      context.strokeStyle = ring === 2 ? "rgba(32, 221, 238, 0.14)" : `rgba(255, 74, 22, ${0.22 - ring * 0.035})`;
+      context.lineWidth = ring === 0 ? 2 : 1;
+      context.shadowColor = ring === 2 ? "rgba(32, 221, 238, 0.35)" : "rgba(255, 74, 22, 0.55)";
+      context.shadowBlur = ring === 0 ? 12 : 5;
+      context.stroke();
+    }
+
+    context.shadowBlur = 8;
+    particles.forEach((particle) => {
+      const angle = particle.angle + time * particle.speed;
+      const x = centerX + Math.cos(angle) * radiusX * particle.radius;
+      const y = centerY + Math.sin(angle) * radiusY * particle.radius;
+      context.beginPath();
+      context.arc(x, y, particle.size, 0, Math.PI * 2);
+      context.fillStyle = particle.warm ? "rgba(255, 112, 61, 0.7)" : "rgba(61, 221, 235, 0.62)";
+      context.shadowColor = particle.warm ? "rgba(255, 74, 22, 0.7)" : "rgba(61, 221, 235, 0.6)";
+      context.fill();
+    });
+    context.shadowBlur = 0;
+
+    if (!reducedMotion && isVisible) animationFrame = window.requestAnimationFrame(drawOrbit);
+  }
+
+  const resizeObserver = new ResizeObserver(() => {
+    resizeOrbit();
+    if (reducedMotion || !isVisible) drawOrbit();
+  });
+  resizeObserver.observe(canvas);
+
+  if ("IntersectionObserver" in window) {
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      const wasVisible = isVisible;
+      isVisible = entry.isIntersecting;
+      if (isVisible && !wasVisible && !reducedMotion) animationFrame = window.requestAnimationFrame(drawOrbit);
+      if (!isVisible) window.cancelAnimationFrame(animationFrame);
+    }, { threshold: 0.05 });
+    visibilityObserver.observe(canvas);
+  }
+
+  resizeOrbit();
+  drawOrbit();
+}
+
 renderMissionPath();
 renderMissions();
 renderProjects();
 renderTeacherPlans();
 updateTrack();
 initializeCapstoneChecks();
+setupLearningOrbit();
 
 const initialView = window.location.hash.replace("#", "");
 if (["home", "missions", "projects", "safety", "quest", "teacher"].includes(initialView)) {
