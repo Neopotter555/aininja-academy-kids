@@ -8,6 +8,7 @@ const requiredFiles = [
   "vercel.json",
   "manifest.webmanifest",
   "assets/aininja-logo.jpg",
+  "assets/ai-ninja-robot.png",
   "assets/og.png",
   "curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md",
   "curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf"
@@ -25,6 +26,9 @@ const [html, css, script, curriculum, curriculumPdf] = await Promise.all([
 
 const checks = [
   [html.includes("AI Ninja Academy"), "brand name"],
+  [html.includes('class="brand-mark" src="/assets/aininja-logo.jpg"'), "original top-left logo preserved"],
+  [html.includes("/assets/ai-ninja-robot.png"), "AI Ninja robot hero"],
+  [["THINK", "BUILD", "TEST", "SHIP"].every((word) => html.includes(`>${word}</div>`)), "four-step robot loop"],
   [html.includes("© 2026 aininja.academy"), "copyright"],
   [html.includes("AI Safety Quest"), "final project"],
   [html.includes("THE SAFE CODE"), "SAFE framework"],

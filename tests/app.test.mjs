@@ -39,6 +39,15 @@ test("uses the requested brand and copyright", () => {
   assert.match(html, /© 2026 aininja\.academy/);
 });
 
+test("uses the robot in the hero while preserving the top-left logo", () => {
+  assert.match(html, /class="brand-mark" src="\/assets\/aininja-logo\.jpg"/);
+  assert.match(html, /src="\/assets\/ai-ninja-robot\.png"/);
+  assert.match(html, /AI Ninja robot with the engineering loop: Think, build, test, ship/);
+  for (const word of ["THINK", "BUILD", "TEST", "SHIP"]) {
+    assert.match(html, new RegExp(`>${word}<\\/div>`));
+  }
+});
+
 test("includes the adaptive AI Engineering 101 teacher syllabus", () => {
   assert.match(html, /ADAPTIVE SYLLABUS/);
   assert.match(html, /6 sessions total/);

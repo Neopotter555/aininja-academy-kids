@@ -532,11 +532,13 @@ main {
 .logo-stage img {
   position: relative;
   z-index: 2;
-  width: min(62%, 250px);
+  width: min(78%, 360px);
   height: auto;
   aspect-ratio: 1;
-  border-radius: 10px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  background: #f8f8f6;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.52);
 }
 
 .orbital-label {
@@ -548,13 +550,20 @@ main {
   background: rgba(8, 9, 10, 0.92);
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 8px;
+  font-size: 9px;
+  font-weight: 800;
   letter-spacing: 0.14em;
 }
 
-.label-one { top: 12%; right: 7%; }
-.label-two { bottom: 20%; left: 0; }
-.label-three { top: 16%; left: 3%; }
+.label-think { top: 12%; left: 3%; }
+.label-build { bottom: 12%; left: 0; }
+.label-test { top: 12%; right: 3%; }
+.label-ship {
+  right: 0;
+  bottom: 12%;
+  border-color: rgba(255, 74, 22, 0.5);
+  color: var(--accent-soft);
+}
 
 .outcome-card {
   position: relative;
