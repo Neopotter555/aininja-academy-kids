@@ -26,8 +26,15 @@ The larger goal is not to make children memorize technical words. It is to help 
 - Grouping: pairs or teams of three
 - Practice-to-theory ratio: about 80% building and 20% explanation
 - Required experience: none
-- Recommended tools: paper, markers, presentation software, Scratch or another teacher-approved block-coding tool, and one teacher-managed AI account
+- Recommended tools: paper, markers, presentation software, Scratch or another teacher-approved block-coding tool, and one adult-operated AI account for demonstrations
 - Final project: a playable branching game with at least five decisions, three safety lessons, a scoring system, and a reflection screen
+
+### Special Codex access rule
+
+- **Ages 10-12:** Learners do not create personal Codex accounts, share an adult's login, or directly operate Codex. They plan prompts, predict results, test the game, and suggest improvements while the teacher signs in, types or runs the task, approves every action, and reviews the result.
+- **Ages 13-16:** Direct use requires parent or guardian permission, teacher or school approval, and active teacher supervision.
+- **Every learner:** Never share account credentials or enter names, faces, voices, precise locations, secrets, health information, family information, or private schoolwork.
+- **Thailand workshops:** Collect written guardian permission and provide a clear privacy notice. Re-check the service's current age rules and local requirements before every cohort.
 
 ### Two difficulty tracks
 
@@ -360,7 +367,7 @@ Delivery contract:
 | 1. The AI Coding Cockpit | Session 1 | The human captain chooses the mission; robot helpers work and check. | Cosmic Hello App with one input, button, and visible result. | Use a picture checklist: folder, inspect, tiny build, open, fix, retest. | Define success criteria before code changes and record evidence. |
 | 2. The Loop | All sessions | Plant, look, water, check, and care for the next leaf. | Improve each build through small loops. | Tell the robot, watch it, try it, and fix one thing. | Ask, inspect, plan, patch, test, reflect, and repeat. |
 | 3. Prompt Engineering That Works | Session 2 | A treasure map needs a goal, starting point, limits, landmarks, proof, and a stop. | Turn “Make me an app” into a testable kids habit-tracker brief. | Use the four-part GOAL recipe and one example. | Add context, constraints, examples, verification, and a stop rule. |
-| 4. A Second Pair of Robot Eyes | Sessions 2 and 6 | One robot builds the bridge; another gently shakes it. | Compare a builder answer with a reviewer answer. | Role-play Builder and Checker on paper. | Use teacher-approved Codex, Claude Code, or Fable 5 and settle disagreement with tests. |
+| 4. A Second Pair of Robot Eyes | Sessions 2 and 6 | One robot builds the bridge; another gently shakes it. | Compare a builder answer with a reviewer answer. | Role-play Builder and Checker on paper while the teacher operates any real AI tool. | With guardian permission and active teacher supervision, use approved Codex, Claude Code, or Fable 5 and settle disagreement with tests. |
 | 5. Debugging Without Panic | Session 4 | Make the bug show itself, then follow its footprints. | Reproduce and fix one prepared bug, then add a return-check. | Use Show it, Find it, Fix it, Try again cards. | Write a reproducible test and a regression check. |
 | 6. Shipping a Real Project | Session 6 | A project is done when another person can use it. | Check opening, buttons, readability, README, secrets, and proof. | Swap devices and use a picture launch card. | Run automated checks, document limits, and make a clean commit. |
 | 7. Building Tiny SaaS and Web Apps | Sessions 4 and 5 | Build one lemonade stand before drawing a giant mall. | Prototype one dashboard flow with sample data and a pretend plan selector. | Use linked paper or slides with no real login or payment. | Use local data and mock checkout; map later Supabase, Stripe, and Vercel connections. |
@@ -378,15 +385,16 @@ Safety boundaries apply throughout: teachers manage coding-agent accounts; learn
 ## Teacher safety and facilitation rules
 
 1. Use a school- or teacher-approved AI service and follow its current age and consent requirements.
-2. Keep accounts teacher-managed for younger learners. Never ask children to create personal accounts merely to complete the course.
-3. Do not enter real names, contact details, precise locations, faces, voices, health details, private schoolwork, or family information.
-4. Use fictional or teacher-provided data in every demonstration.
-5. Do not use AI as a therapist, doctor, authority, disciplinarian, or private confidant.
-6. A teacher reviews generated content before it is shown widely or published.
-7. Do not publish a child’s game, image, name, or voice without the required guardian and school permission.
-8. Teach learners to report disturbing, sexual, hateful, manipulative, or frightening output immediately. They should close or cover the screen and call an adult, not investigate it alone.
-9. Do not grade learners on whether AI produced a “perfect” answer. Grade their questions, checking, improvements, safety decisions, and explanations.
-10. Keep a non-AI path available so every learner can participate if consent, access, connectivity, or comfort is different.
+2. For ages 10-12, the teacher signs in and operates Codex. Learners may plan, predict, test, and improve, but they do not create personal accounts, share the teacher's login, or directly operate Codex.
+3. For ages 13-16, direct Codex use requires parent or guardian permission and active teacher supervision.
+4. Do not enter real names, contact details, precise locations, faces, voices, health details, private schoolwork, or family information.
+5. Use fictional or teacher-provided data in every demonstration.
+6. Do not use AI as a therapist, doctor, authority, disciplinarian, or private confidant.
+7. A teacher reviews generated content before it is shown widely or published.
+8. Do not publish a child’s game, image, name, or voice without the required guardian and school permission.
+9. Teach learners to report disturbing, sexual, hateful, manipulative, or frightening output immediately. They should close or cover the screen and call an adult, not investigate it alone.
+10. Do not grade learners on whether AI produced a “perfect” answer. Grade their questions, checking, improvements, safety decisions, and explanations.
+11. Keep a non-AI path available so every learner can participate if consent, access, connectivity, or comfort is different.
 
 ## Assessment without heavy theory
 

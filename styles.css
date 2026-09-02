@@ -953,6 +953,110 @@ main {
   gap: 16px;
 }
 
+.codex-age-note {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  padding: 26px;
+  border-color: #66301f;
+  background:
+    linear-gradient(120deg, rgba(255, 74, 22, 0.11), transparent 48%),
+    var(--panel);
+}
+
+.codex-age-note::after {
+  content: "ADULT OPERATED";
+  position: absolute;
+  top: 18px;
+  right: -37px;
+  transform: rotate(34deg);
+  padding: 5px 40px;
+  background: var(--orange);
+  color: #090a0c;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.codex-age-note-marker {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #78341f;
+  border-radius: 7px;
+  background: var(--orange-soft);
+  color: var(--orange);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.codex-age-note-content {
+  padding-right: 62px;
+}
+
+.codex-age-note h2 {
+  margin: 7px 0 0;
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -0.035em;
+}
+
+.codex-age-note-content > p:not(.codex-age-note-footnote) {
+  max-width: 900px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.codex-age-rules {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid #3b2a24;
+  border-radius: 7px;
+  background: #3b2a24;
+}
+
+.codex-age-rules > div {
+  padding: 14px 15px;
+  background: #0d0f12;
+}
+
+.codex-age-rules strong,
+.codex-age-rules span {
+  display: block;
+}
+
+.codex-age-rules strong {
+  color: #ff9e81;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+}
+
+.codex-age-rules span {
+  margin-top: 7px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.codex-age-note-footnote {
+  margin: 13px 0 0;
+  color: #858d97;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
 .syllabus-overview {
   margin-bottom: 16px;
 }
@@ -1647,6 +1751,7 @@ footer {
   .quest-layout { grid-template-columns: 1fr; }
   .quest-sidebar { grid-template-columns: 0.4fr 1fr; }
   .course-phase-grid,
+  .codex-age-rules,
   .delivery-options { grid-template-columns: 1fr; }
   .module-body { grid-template-columns: 1fr; }
 }
@@ -1674,6 +1779,9 @@ footer {
   .lab-grid,
   .teacher-grid,
   .engineer-log { grid-template-columns: 1fr; }
+  .codex-age-note { grid-template-columns: 1fr; }
+  .codex-age-note-content { padding-right: 0; }
+  .codex-age-note::after { display: none; }
   .adaptive-header { flex-direction: column; }
   .module-body { padding-left: 15px; }
   .principles-grid { grid-template-columns: 1fr; }

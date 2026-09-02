@@ -111,7 +111,7 @@ const adaptiveModules = [
     story: "One robot builds a bridge; another gently shakes it and points to the weak plank. The human captain decides what to fix.",
     build: "Compare one builder answer with one reviewer answer. Mark agreements, disagreements, risks, and the evidence needed.",
     explorer: "Role-play two paper robots: Builder and Checker. The teacher operates any real AI tools.",
-    builder: "Use teacher-approved Codex, Claude Code, or Fable 5, then resolve disagreements with tests—not votes.",
+    builder: "With guardian permission and active teacher supervision, use approved Codex, Claude Code, or Fable 5, then resolve disagreements with tests—not votes.",
     safety: "External agents are teacher-managed. Never paste private student work, credentials, or unpublished personal material.",
     time: "SESSIONS 2 + 6"
   },

@@ -56,3 +56,15 @@ test("keeps the web app and downloadable syllabus at six 60-minute sessions", ()
   assert.equal((curriculum.match(/^### Session \d —/gmu) || []).length, 6);
   assert.doesNotMatch(curriculum, /90-minute|90 minutes|Eight-session|8 sessions|Ten-session|10-session|Four-week studio/i);
 });
+
+test("shows the teacher-only Codex age and consent note", () => {
+  assert.match(html, /SPECIAL SAFETY NOTE · CODEX/);
+  assert.match(html, /Ages 10–12 design\. The teacher operates\./);
+  assert.match(html, /No personal Codex account and no direct operation/);
+  assert.match(html, /parent or guardian permission and active teacher supervision/);
+  assert.match(html, /Never share account credentials/);
+  assert.match(html, /For Thailand workshops, collect written guardian permission/);
+  assert.match(script, /With guardian permission and active teacher supervision/);
+  assert.match(curriculum, /Special Codex access rule/);
+  assert.match(curriculum, /Learners do not create personal Codex accounts/);
+});
