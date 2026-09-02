@@ -343,6 +343,44 @@ Score each area from 1 to 4. Use the rubric for feedback, not competition.
 
 Completion target: mostly level 3. Level 4 is an optional stretch, not the price of success.
 
+## Adaptive AI Engineering 101 syllabus
+
+These modules are an adaptive engineering layer for the eight-mission safety course. Use the same idea with two depths: the Explorer track for ages 10–12 uses pictures, metaphors, paired work, and guided steps; the Builder track for ages 13–16 adds success criteria, stronger testing, written evidence, and optional teacher-managed coding agents.
+
+### Course structure
+
+1. **Safe foundations — Missions 1–4:** patterns, instructions, truth checking, and privacy.
+2. **Engineer habits — Missions 5–6:** kind design, tiny steps, prompting, debugging, and proof.
+3. **Build and ship — Missions 7–8:** create AI Safety Quest, test unusual paths, improve it, and present the evidence.
+
+Suggested delivery formats:
+
+- **120-minute sampler:** The AI Coding Cockpit, The Loop, and the Cosmic Hello App.
+- **Four-week studio:** two 90-minute practical sessions per week.
+- **Ten-session full course:** one session for each of the nine modules below, followed by a final showcase.
+
+### The nine adaptive modules
+
+| Module | Child-friendly idea | Practical build | Explorer, ages 10–12 | Builder, ages 13–16 |
+| --- | --- | --- | --- | --- |
+| 1. The AI Coding Cockpit | The human captain chooses the mission; robot helpers work and check. | Cosmic Hello App with one input, button, and visible result. | Use a picture checklist: folder, inspect, tiny build, open, fix, retest. | Define success criteria before code changes and record evidence. |
+| 2. The Loop | Plant, look, water, check, and care for the next leaf. | Improve the Hello App through three tiny loops. | Tell the robot, watch it, try it, and fix one thing. | Ask, inspect, plan, patch, test, reflect, and repeat. |
+| 3. Prompt Engineering That Works | A treasure map needs a goal, starting point, limits, landmarks, proof, and a stop. | Turn “Make me an app” into a testable kids habit-tracker brief. | Use the four-part GOAL recipe and one example. | Add context, constraints, examples, verification, and a stop rule. |
+| 4. A Second Pair of Robot Eyes | One robot builds the bridge; another gently shakes it. | Compare a builder answer with a reviewer answer. | Role-play Builder and Checker on paper. | Use teacher-approved Codex, Claude Code, or Fable 5 and settle disagreement with tests. |
+| 5. Debugging Without Panic | Make the bug show itself, then follow its footprints. | Reproduce and fix one prepared bug, then add a return-check. | Use Show it, Find it, Fix it, Try again cards. | Write a reproducible test and a regression check. |
+| 6. Shipping a Real Project | A project is done when another person can use it. | Check opening, buttons, readability, README, secrets, and proof. | Swap devices and use a picture launch card. | Run automated checks, document limits, and make a clean commit. |
+| 7. Building Tiny SaaS and Web Apps | Build one lemonade stand before drawing a giant mall. | Prototype one dashboard flow with sample data and a pretend plan selector. | Use linked paper or slides with no real login or payment. | Use local data and mock checkout; map later Supabase, Stripe, and Vercel connections. |
+| 8. The Teacher Loop | Teach one dance step before adding the next. | Rehearse a ten-minute story-plus-build micro-lesson. | Use one metaphor, demo, and learner-created result. | Add criteria, an edge case, peer feedback, and one improvement. |
+| 9. Five Practice Labs | Earn skill badges through small missions, not a giant scroll. | Cosmic Hello, Habit Rocket, Bug Detective, Mini SaaS Studio, or a teacher-led Fable 5 Risk Review. | Complete a guided lab with a partner and show one proof. | Complete a structured build or risk review with verification evidence. |
+
+Every module ends with the same three pieces of proof:
+
+1. A working click path or repeatable demonstration.
+2. A visible result or test record.
+3. A learner explanation of what changed, what was checked, and what should happen next.
+
+Safety boundaries apply throughout: teachers manage coding-agent accounts; learners use fictional or sample data; no real payments, production databases, child accounts, secrets, faces, voices, precise locations, or private schoolwork are used in class; and public sharing requires teacher and guardian approval.
+
 ## Teacher safety and facilitation rules
 
 1. Use a school- or teacher-approved AI service and follow its current age and consent requirements.

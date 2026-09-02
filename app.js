@@ -93,6 +93,99 @@ const projects = [
   { symbol: "△", title: "AI Zoo Guide", copy: "Invent imaginary animals, then separate creative details from facts that need checking.", time: "45 MIN", skill: "CREATIVE + TRUE" }
 ];
 
+const adaptiveModules = [
+  {
+    title: "The AI Coding Cockpit",
+    summary: "Choose the mission, guide the helper, and check the result.",
+    story: "A spaceship has different seats: the captain chooses the destination, the robot helps fly, and the safety officer checks the journey.",
+    build: "Create a Cosmic Hello App: one friendly input, one button, and one visible result. Open it, change one thing, and test again.",
+    explorer: "Say the mission in one sentence and use a picture checklist: folder, inspect, tiny build, open, fix, retest.",
+    builder: "Write success criteria before any code changes, then record evidence for each criterion.",
+    safety: "A teacher manages coding tools and accounts. Learners use fictional names and content.",
+    time: "70 MIN BUILD"
+  },
+  {
+    title: "The Loop",
+    summary: "Ask, inspect, plan, patch, test, reflect, and repeat.",
+    story: "A gardener does not shout “grow!” once. They plant, look, water a little, check, and care for the next leaf.",
+    build: "Change the Cosmic Hello App in three tiny loops. After each loop, write what changed and what the test showed.",
+    explorer: "Tell the robot what to build, watch it build, try it, and ask it to fix one thing.",
+    builder: "Use the seven-step loop and define the next test before making another change.",
+    safety: "Stop the loop when the goal changes, private data appears, or adult approval is needed.",
+    time: "65 MIN BUILD"
+  },
+  {
+    title: "Prompt Engineering That Works",
+    summary: "A strong prompt has a goal, context, limits, examples, checks, and a stop rule.",
+    story: "A treasure map needs a destination, starting point, boundaries, landmarks, a way to know you arrived, and a place to stop.",
+    build: "Turn “Make me an app” into a testable brief for a one-page kids habit tracker that saves three sample habits locally.",
+    explorer: "Use the four-part GOAL recipe and one example of the answer you want.",
+    builder: "Add constraints, verification steps, and a clear stop rule to the project brief.",
+    safety: "Prompts use invented data, never secrets, faces, voices, school details, or payment information.",
+    time: "60 MIN BUILD"
+  },
+  {
+    title: "A Second Pair of Robot Eyes",
+    summary: "Different coding agents can build, inspect, or challenge an idea from another angle.",
+    story: "One robot builds a bridge; another gently shakes it and points to the weak plank. The human captain decides what to fix.",
+    build: "Compare one builder answer with one reviewer answer. Mark agreements, disagreements, risks, and the evidence needed.",
+    explorer: "Role-play two paper robots: Builder and Checker. The teacher operates any real AI tools.",
+    builder: "Use teacher-approved Codex, Claude Code, or Fable 5, then resolve disagreements with tests—not votes.",
+    safety: "External agents are teacher-managed. Never paste private student work, credentials, or unpublished personal material.",
+    time: "55 MIN PRACTICE"
+  },
+  {
+    title: "Debugging Without Panic",
+    summary: "Make the bug appear, read its footprints, fix one piece, and retest the same path.",
+    story: "A bug leaves muddy footprints. Guessing searches the whole forest; debugging follows one print at a time.",
+    build: "Use a prepared broken app. Reproduce the bug, capture the exact clue, fix the smallest cause, and add a return-check.",
+    explorer: "Use four cards: Show it, Find it, Fix it, Try it again.",
+    builder: "Write a reproducible test, isolate the smallest broken unit, patch it, and add a regression check.",
+    safety: "Use prepared demo bugs. Do not experiment on live accounts, payments, school systems, or other people’s data.",
+    time: "70 MIN BUILD"
+  },
+  {
+    title: "Shipping a Real Project",
+    summary: "A project is done when another person can use it and the proof is visible.",
+    story: "A toy is not ready for the shop because its maker says so. Another child must open it, understand it, and play safely.",
+    build: "Run the ship checklist: app opens, main buttons work, phone text is readable, README exists, secrets are absent, and tests are recorded.",
+    explorer: "Swap devices with a partner and use a picture-based six-check launch card.",
+    builder: "Run automated checks, document known limits, and create a clean Git commit with verified scope.",
+    safety: "Teacher approval is required before public sharing. Do not publish a child’s name, image, voice, or location.",
+    time: "65 MIN TEST"
+  },
+  {
+    title: "Building Tiny SaaS and Web Apps",
+    summary: "Start with one user and one painful job before adding more screens.",
+    story: "Build one working lemonade stand before drawing a giant shopping mall.",
+    build: "Create a Mini SaaS Studio prototype with one dashboard flow, sample data, a pretend plan selector, admin sketch, and README.",
+    explorer: "Build a clickable paper or slide prototype with no real login or payment.",
+    builder: "Use local-only data and a mock checkout state; map where Supabase, Stripe, and Vercel could connect later.",
+    safety: "No real payments, cards, production databases, or child accounts are used in class.",
+    time: "75 MIN BUILD"
+  },
+  {
+    title: "The Teacher Loop",
+    summary: "Show one idea, build one thing, repeat, celebrate proof, add one challenge, and loop.",
+    story: "Teach one dance step, let everyone try it, cheer the movement, then add only the next step.",
+    build: "In pairs, rehearse a ten-minute micro-lesson with a two-minute story and an eight-minute learner build.",
+    explorer: "Use one metaphor, one demonstration, and one learner-created result.",
+    builder: "Add success criteria, an edge case, peer feedback, and one measured improvement.",
+    safety: "Praise thinking and iteration, not speed or a perfect AI answer. Always keep a non-AI path available.",
+    time: "60 MIN PRACTICE"
+  },
+  {
+    title: "Five Practice Labs",
+    summary: "Choose a build that ends with a working click path, visible result, and learner explanation.",
+    story: "A ninja earns skill badges by completing small missions—not by reading a giant instruction scroll.",
+    build: "Choose one: Cosmic Hello App, Habit Rocket, Bug Detective Board, Mini SaaS Studio, or a teacher-led Fable 5 Risk Review.",
+    explorer: "Complete Cosmic Hello, Habit Rocket, or Bug Detective with a partner and show one proof.",
+    builder: "Complete Mini SaaS Studio or a structured risk review with success criteria, top risks, fixes, and verification evidence.",
+    safety: "Use local sample data and mock services. The teacher owns any agent access and approves all public publishing.",
+    time: "75 MIN BUILD"
+  }
+];
+
 const questQuestions = [
   {
     title: "The Personalization Gate",
@@ -275,11 +368,35 @@ function renderProjects() {
     </article>`).join("");
 }
 
+function renderAdaptiveSyllabus() {
+  const isExplorer = appState.track === "explorer";
+  const trackLabel = isExplorer ? "Explorer adaptation" : "Builder adaptation";
+  document.getElementById("adaptive-track-readout").textContent = isExplorer ? "EXPLORER · 10–12" : "BUILDER · 13–16";
+  document.getElementById("adaptive-track-summary").textContent = isExplorer
+    ? "Simple metaphors, guided builds, and short explanations for the Explorer track."
+    : "Clear success criteria, stronger testing, and deeper build evidence for the Builder track.";
+  document.getElementById("adaptive-module-list").innerHTML = adaptiveModules.map((module, index) => `
+    <details class="syllabus-module" ${index === 0 ? "open" : ""}>
+      <summary>
+        <span class="module-number">${String(index + 1).padStart(2, "0")}</span>
+        <span class="module-heading"><strong>${module.title}</strong><span>${module.summary}</span></span>
+        <span class="module-time">${module.time}</span>
+      </summary>
+      <div class="module-body">
+        <div class="module-panel"><span>STORY</span><p>${module.story}</p></div>
+        <div class="module-panel"><span>PRACTICAL BUILD</span><p>${module.build}</p></div>
+        <div class="module-panel"><span>${trackLabel.toUpperCase()}</span><p>${module[appState.track]}</p></div>
+        <div class="module-safety"><strong>Safety boundary:</strong> ${module.safety}</div>
+      </div>
+    </details>`).join("");
+}
+
 function updateTrack() {
   document.querySelectorAll("[data-track]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.track === appState.track);
   });
   renderMissions();
+  renderAdaptiveSyllabus();
 }
 
 function toggleMission(index) {

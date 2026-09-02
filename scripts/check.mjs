@@ -29,6 +29,7 @@ const checks = [
   [css.includes("prefers-reduced-motion"), "reduced-motion support"],
   [script.includes("const missions = ["), "mission data"],
   [script.includes("const questQuestions = ["), "playable quest data"],
+  [script.includes("const adaptiveModules = ["), "adaptive teacher syllabus"],
   [script.includes("localStorage"), "local-only progress"],
   [!html.includes("http://") && !html.includes("https://"), "no external page dependencies"]
 ];

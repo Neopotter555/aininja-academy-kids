@@ -33,3 +33,13 @@ test("uses the requested brand and copyright", () => {
   assert.match(html, /aininja\.academy/);
   assert.match(html, /© 2026 aininja\.academy/);
 });
+
+test("includes the adaptive AI Engineering 101 teacher syllabus", () => {
+  assert.match(html, /ADAPTIVE SYLLABUS/);
+  assert.match(html, /10-session full course/);
+  assert.match(script, /const adaptiveModules = \[/);
+  assert.match(script, /The AI Coding Cockpit/);
+  assert.match(script, /Debugging Without Panic/);
+  assert.match(script, /Five Practice Labs/);
+  assert.match(script, /No real payments, cards, production databases, or child accounts/);
+});
