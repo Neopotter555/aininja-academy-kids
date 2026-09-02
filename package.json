@@ -1,0 +1,13 @@
+{
+  "name": "ai-ninja-academy-kids",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project-first AI safety and engineering course for ages 10-16.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/app.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

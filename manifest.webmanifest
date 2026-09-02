@@ -1,0 +1,17 @@
+{
+  "name": "AI Engineer for Kids — AI Ninja Academy",
+  "short_name": "AI Ninja Kids",
+  "description": "A project-first AI safety and engineering course for ages 10–16.",
+  "start_url": "/#home",
+  "display": "standalone",
+  "background_color": "#08090a",
+  "theme_color": "#08090a",
+  "icons": [
+    {
+      "src": "/assets/aininja-logo.jpg",
+      "sizes": "1254x1254",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

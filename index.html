@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08090a" />
+    <meta
+      name="description"
+      content="A project-first AI safety and engineering course for learners ages 10–16 by AI Ninja Academy."
+    />
+    <meta property="og:title" content="AI Engineer for Kids | AI Ninja Academy" />
+    <meta
+      property="og:description"
+      content="Learn to think like an AI engineer, build safely, and create a playable AI Safety Quest."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Engineer for Kids | AI Ninja Academy" />
+    <meta
+      name="twitter:description"
+      content="Eight practical missions. One playable final game. Safe AI habits for ages 10–16."
+    />
+    <meta name="twitter:image" content="/assets/og.png" />
+    <link rel="icon" type="image/jpeg" href="/assets/aininja-logo.jpg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>AI Engineer for Kids | AI Ninja Academy</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Course navigation">
+        <div class="brand-lockup">
+          <img class="brand-mark" src="/assets/aininja-logo.jpg" alt="AI Ninja Academy logo" width="52" height="52" />
+          <div>
+            <strong>AI Ninja Academy</strong>
+            <span>aininja.academy</span>
+          </div>
+        </div>
+
+        <nav class="nav-stack">
+          <button class="nav-item is-active" type="button" data-view="home" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            Mission Control
+          </button>
+          <button class="nav-item" type="button" data-view="missions">
+            <span class="nav-icon" aria-hidden="true">◫</span>
+            8 Missions
+          </button>
+          <button class="nav-item" type="button" data-view="projects">
+            <span class="nav-icon" aria-hidden="true">◇</span>
+            Project Lab
+          </button>
+          <button class="nav-item" type="button" data-view="safety">
+            <span class="nav-icon" aria-hidden="true">⬡</span>
+            SAFE Lab
+          </button>
+          <button class="nav-item" type="button" data-view="quest">
+            <span class="nav-icon" aria-hidden="true">✦</span>
+            Final Quest
+          </button>
+          <button class="nav-item" type="button" data-view="teacher">
+            <span class="nav-icon" aria-hidden="true">▤</span>
+            Teacher Base
+          </button>
+        </nav>
+
+        <div class="sidebar-card">
+          <span class="eyebrow">THE SAFE CODE</span>
+          <p><strong>S</strong>ecrets stay secret</p>
+          <p><strong>A</strong>sk a trusted adult</p>
+          <p><strong>F</strong>ind the proof</p>
+          <p><strong>E</strong>veryone deserves kindness</p>
+        </div>
+
+        <p class="privacy-note">Progress stays on this device. No account or personal details needed.</p>
+      </aside>
+
+      <div class="app-main">
+        <header class="topbar">
+          <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="sidebar">
+            <span aria-hidden="true">☰</span>
+            <span class="sr-only">Open navigation</span>
+          </button>
+          <div class="topbar-title">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="current-view-label">Mission Control</span>
+          </div>
+          <div class="track-switch" role="group" aria-label="Choose age track">
+            <button type="button" class="track-button is-active" data-track="explorer">Explorer <span>10–12</span></button>
+            <button type="button" class="track-button" data-track="builder">Builder <span>13–16</span></button>
+          </div>
+        </header>
+
+        <main id="main-content" tabindex="-1">
+          <section class="view is-visible" id="view-home" data-view-panel="home">
+            <div class="hero-grid">
+              <article class="hero-copy surface">
+                <div class="pill-row">
+                  <span class="pill pill-orange">AGES 10–16</span>
+                  <span class="pill">80% HANDS-ON</span>
+                  <span class="pill">NO EXPERIENCE NEEDED</span>
+                </div>
+                <p class="eyebrow">AI ENGINEER FOR KIDS</p>
+                <h1>Think clearly.<br /><span>Build safely.</span><br />Make a game.</h1>
+                <p class="hero-lede">
+                  Eight practical missions teach children how to guide AI, question its answers, protect private information,
+                  and improve ideas one small step at a time.
+                </p>
+                <div class="button-row">
+                  <button class="button button-primary" type="button" data-go="missions">Start Mission 1 <span aria-hidden="true">→</span></button>
+                  <button class="button button-secondary" type="button" data-go="quest">Play the Final Quest</button>
+                </div>
+              </article>
+
+              <aside class="hero-visual surface-strong" aria-label="Course outcome">
+                <div class="logo-stage">
+                  <img src="/assets/aininja-logo.jpg" alt="" width="250" height="250" />
+                  <div class="orbital-label label-one">TEST</div>
+                  <div class="orbital-label label-two">BUILD</div>
+                  <div class="orbital-label label-three">THINK</div>
+                </div>
+                <div class="outcome-card">
+                  <span class="eyebrow">FINAL BUILD</span>
+                  <strong>AI Safety Quest</strong>
+                  <p>A playable branching game that teaches another child how to use AI safely.</p>
+                </div>
+              </aside>
+            </div>
+
+            <div class="dashboard-grid">
+              <article class="progress-panel surface">
+                <div class="section-heading compact">
+                  <div>
+                    <span class="eyebrow">YOUR JOURNEY</span>
+                    <h2>Eight missions, one complete project</h2>
+                  </div>
+                  <span class="progress-number"><strong id="progress-count">0</strong>/8 complete</span>
+                </div>
+                <div class="progress-track" aria-label="Course progress"><span id="progress-fill"></span></div>
+                <div class="mission-path" id="mission-path"></div>
+              </article>
+
+              <article class="story-panel surface">
+                <div class="story-icon" aria-hidden="true">🐕</div>
+                <span class="eyebrow">REMEMBER THIS</span>
+                <h2>The Robot Puppy</h2>
+                <p>
+                  AI is like a very fast robot puppy. It wants to help, but sometimes brings a slipper when you asked for a
+                  sandwich. Give it a clear map, check what it brings, and try again.
+                </p>
+                <button class="text-button" type="button" data-go="missions">See the story missions <span aria-hidden="true">→</span></button>
+              </article>
+            </div>
+
+            <div class="principles-grid">
+              <article class="principle-card surface"><span>01</span><h3>Break it down</h3><p>Turn one big problem into tiny stepping stones.</p></article>
+              <article class="principle-card surface"><span>02</span><h3>Test the answer</h3><p>A confident answer is still only an answer to check.</p></article>
+              <article class="principle-card surface"><span>03</span><h3>Keep a human in charge</h3><p>AI helps. People choose, care, and take responsibility.</p></article>
+            </div>
+          </section>
+
+          <section class="view" id="view-missions" data-view-panel="missions" hidden>
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">THE BUILD-A-BRIDGE LOOP</span>
+                <h1>Eight practical missions</h1>
+                <p>Each 90-minute mission uses a tiny story, a real build, peer testing, and one improvement.</p>
+              </div>
+              <div class="ratio-card"><strong>80%</strong><span>building, testing<br />and improving</span></div>
+            </div>
+            <div class="mission-list" id="mission-list"></div>
+          </section>
+
+          <section class="view" id="view-projects" data-view-panel="projects" hidden>
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">PROJECT LAB</span>
+                <h1>Small builds with big thinking</h1>
+                <p>Use these projects for extra classes, early finishers, clubs, or weekend workshops.</p>
+              </div>
+              <span class="section-badge">7 PROJECTS</span>
+            </div>
+            <div class="project-grid" id="project-grid"></div>
+          </section>
+
+          <section class="view" id="view-safety" data-view-panel="safety" hidden>
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">SAFE LAB</span>
+                <h1>Practice before you prompt</h1>
+                <p>These tools work only in this browser. Nothing is sent to an AI service.</p>
+              </div>
+              <span class="section-badge safe-badge">LOCAL-ONLY</span>
+            </div>
+
+            <div class="lab-grid">
+              <article class="surface lab-card">
+                <div class="card-title-row">
+                  <div class="number-tile">01</div>
+                  <div><span class="eyebrow">PRIVACY BACKPACK</span><h2>Check a prompt before sharing</h2></div>
+                </div>
+                <label for="prompt-checker">Write or paste a practice prompt</label>
+                <textarea id="prompt-checker" rows="7" placeholder="Example: Help a fictional student named Nova make a study plan for a science quiz."></textarea>
+                <div class="input-actions">
+                  <button class="button button-primary" id="check-prompt" type="button">Run SAFE check</button>
+                  <button class="button button-quiet" id="use-prompt-example" type="button">Use an example</button>
+                  <button class="button button-quiet" id="clear-prompt" type="button">Clear</button>
+                </div>
+                <div class="result-box" id="prompt-result" role="status" aria-live="polite">
+                  Your check will appear here. Remember: a tool can remind you, but a trusted adult helps you decide.
+                </div>
+              </article>
+
+              <article class="surface lab-card">
+                <div class="card-title-row">
+                  <div class="number-tile">02</div>
+                  <div><span class="eyebrow">TREASURE MAP</span><h2>Build a clear GOAL prompt</h2></div>
+                </div>
+                <div class="goal-form">
+                  <label>G — Goal<input id="goal-goal" type="text" placeholder="Explain how rainbows form" /></label>
+                  <label>O — Objects and facts<input id="goal-objects" type="text" placeholder="For a curious 11-year-old" /></label>
+                  <label>A — Agreements<input id="goal-agreements" type="text" placeholder="Use simple words; say when unsure" /></label>
+                  <label>L — Look<input id="goal-look" type="text" placeholder="A tiny story and 3 bullet points" /></label>
+                </div>
+                <button class="button button-primary" id="build-prompt" type="button">Build my prompt</button>
+                <div class="result-box prompt-output" id="goal-output" role="status" aria-live="polite">Fill the four map pieces, then build your prompt.</div>
+                <button class="text-button copy-button" id="copy-prompt" type="button" hidden>Copy prompt</button>
+              </article>
+            </div>
+
+            <div class="safe-grid">
+              <article class="safe-card"><strong>S</strong><h3>Secrets stay secret</h3><p>Keep names, passwords, addresses, schools, faces, and family details private.</p></article>
+              <article class="safe-card"><strong>A</strong><h3>Ask a trusted adult</h3><p>Stop when something feels personal, frightening, unfair, or confusing.</p></article>
+              <article class="safe-card"><strong>F</strong><h3>Find the proof</h3><p>Check important claims with good sources or a knowledgeable person.</p></article>
+              <article class="safe-card"><strong>E</strong><h3>Everyone deserves kindness</h3><p>Never use AI to bully, cheat, impersonate, embarrass, or harm.</p></article>
+            </div>
+          </section>
+
+          <section class="view" id="view-quest" data-view-panel="quest" hidden>
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">FINAL PROJECT</span>
+                <h1>AI Safety Quest</h1>
+                <p>Play the example game, then use its blueprint to build your own branching adventure.</p>
+              </div>
+              <span class="section-badge quest-badge">PLAYABLE</span>
+            </div>
+
+            <div class="quest-layout">
+              <article class="quest-console surface-strong" id="quest-console">
+                <div class="console-topline">
+                  <span><i></i> ROBOT CITY TRAINING SIMULATION</span>
+                  <span id="quest-step-label">READY</span>
+                </div>
+                <div class="quest-progress"><span id="quest-progress-fill"></span></div>
+                <div class="quest-screen" id="quest-screen">
+                  <div class="quest-emblem">✦</div>
+                  <span class="eyebrow">YOUR MISSION</span>
+                  <h2>Protect Robot City</h2>
+                  <p>
+                    The city’s helper robot is learning to use AI. Guide it through five choices using your privacy backpack,
+                    truth lamp, kindness shield, and human-help beacon.
+                  </p>
+                  <button class="button button-primary button-large" id="start-quest" type="button">Begin the quest <span aria-hidden="true">→</span></button>
+                </div>
+              </article>
+
+              <aside class="quest-sidebar">
+                <article class="score-card surface">
+                  <span class="eyebrow">NINJA SCORE</span>
+                  <strong id="quest-score">0</strong>
+                  <span>/ 5 stars</span>
+                </article>
+                <article class="surface checklist-card">
+                  <span class="eyebrow">BUILD YOUR VERSION</span>
+                  <h3>Quest requirements</h3>
+                  <label><input type="checkbox" data-capstone-check="mission" /> Clear mission</label>
+                  <label><input type="checkbox" data-capstone-check="decisions" /> Five decisions</label>
+                  <label><input type="checkbox" data-capstone-check="privacy" /> Privacy challenge</label>
+                  <label><input type="checkbox" data-capstone-check="truth" /> Truth challenge</label>
+                  <label><input type="checkbox" data-capstone-check="kindness" /> Kindness challenge</label>
+                  <label><input type="checkbox" data-capstone-check="score" /> Score or badge</label>
+                  <label><input type="checkbox" data-capstone-check="endings" /> Two endings</label>
+                  <label><input type="checkbox" data-capstone-check="reflection" /> Final reflection</label>
+                  <div class="mini-progress"><span id="capstone-progress-fill"></span></div>
+                  <p id="capstone-progress-label">0 of 8 ready</p>
+                </article>
+              </aside>
+            </div>
+          </section>
+
+          <section class="view" id="view-teacher" data-view-panel="teacher" hidden>
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">ADULT-ONLY GUIDE</span>
+                <h1>Teacher Base</h1>
+                <p>Run a calm, safe, practical class without turning it into a long technology lecture.</p>
+              </div>
+              <a class="button button-secondary" href="/curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md" download>Download curriculum</a>
+            </div>
+
+            <div class="teacher-grid">
+              <article class="surface rhythm-card">
+                <span class="eyebrow">90-MINUTE RHYTHM</span>
+                <h2>Same rhythm, every session</h2>
+                <ol class="timeline">
+                  <li><span>10 min</span><div><strong>Story + movement</strong><p>One memorable idea, no long lecture.</p></div></li>
+                  <li><span>10 min</span><div><strong>Teacher demo</strong><p>Show the idea and one deliberate mistake.</p></div></li>
+                  <li><span>45 min</span><div><strong>Build challenge</strong><p>Learners make something in pairs or teams.</p></div></li>
+                  <li><span>13 min</span><div><strong>Swap + test</strong><p>Another team tries it and finds one improvement.</p></div></li>
+                  <li><span>08 min</span><div><strong>Fix one thing</strong><p>Apply feedback and test again.</p></div></li>
+                  <li><span>04 min</span><div><strong>Exit ticket</strong><p>“I built, I checked, next I would...”</p></div></li>
+                </ol>
+              </article>
+
+              <article class="surface guardrail-card">
+                <span class="eyebrow">NON-NEGOTIABLES</span>
+                <h2>Keep people in control</h2>
+                <ul class="guardrail-list">
+                  <li>Use only teacher- or school-approved AI services and follow current age and consent rules.</li>
+                  <li>Keep accounts teacher-managed for younger learners.</li>
+                  <li>Use fictional or teacher-provided information in every demonstration.</li>
+                  <li>Never enter a child’s face, voice, precise location, health details, or private schoolwork.</li>
+                  <li>Do not use AI as a therapist, doctor, authority, disciplinarian, or private confidant.</li>
+                  <li>Review generated material before showing it widely or publishing it.</li>
+                  <li>Keep a complete non-AI path for consent, access, connectivity, or comfort differences.</li>
+                </ul>
+              </article>
+            </div>
+
+            <article class="surface engineer-log">
+              <div>
+                <span class="eyebrow">ASSESS THE THINKING</span>
+                <h2>The one-page engineer log</h2>
+                <p>Grade the child’s questions, checking, improvements, safety decisions, and explanation—not whether AI made a perfect answer.</p>
+              </div>
+              <pre>Today our goal was:
+We broke it into:
+We asked or instructed:
+The first result did:
+We found this problem:
+We changed:
+Our safety check was:
+Next time we would:</pre>
+            </article>
+          </section>
+        </main>
+
+        <footer>
+          <span>© 2026 aininja.academy</span>
+          <span>AI helps. People decide.</span>
+        </footer>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
