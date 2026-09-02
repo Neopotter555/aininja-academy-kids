@@ -64,6 +64,99 @@ const missions = [
   }
 ];
 
+const teacherSessionPlans = [
+  {
+    number: "01",
+    title: "Meet the Robot Puppy",
+    outcome: "Learners explain that AI follows patterns while people choose the goal, judge the result, and stay responsible.",
+    materials: ["Robot Puppy story card", "Red-object sorting cards", "Markers and paper", "Cosmic Hello starter or slides", "One team device"],
+    proof: "A working sort or Cosmic Hello result, one surprising test, and one improvement.",
+    timing: [
+      { time: "00–04", title: "Story + movement", detail: "Act out the Robot Puppy fetching red objects, including one funny wrong choice." },
+      { time: "04–10", title: "Teacher demo", detail: "Show one pattern helper and deliberately test it with an example it has not seen." },
+      { time: "10–44", title: "Build challenge", detail: "Pairs build a paper sorting robot or Cosmic Hello App, write one success rule, and test three inputs." },
+      { time: "44–52", title: "Swap + test", detail: "Another team tries one normal input and one surprising input without coaching." },
+      { time: "52–58", title: "Fix one thing", detail: "Teams improve one instruction, rule, label, or button and repeat the failed test." },
+      { time: "58–60", title: "Exit ticket", detail: "Finish: “A pattern is a clue, but the human still has to…”" }
+    ]
+  },
+  {
+    number: "02",
+    title: "Map It, Then Check It",
+    outcome: "Learners repair a vague request with GOAL and separate confident language from checked evidence.",
+    materials: ["Four GOAL prompt cards", "Red, yellow, and green truth cards", "Two teacher-provided fact sources", "Prompt worksheet", "One team device"],
+    proof: "A complete GOAL prompt, a truth-lamp rating, and a written verification step.",
+    timing: [
+      { time: "00–04", title: "Story + movement", detail: "Use a treasure map and a loud parrot to show why clear directions and confidence are different." },
+      { time: "04–10", title: "Teacher demo", detail: "Turn “Tell me about space” into a GOAL prompt, then flag one unsupported answer." },
+      { time: "10–44", title: "Build challenge", detail: "Pairs repair three prompts, choose their strongest one, and check the result with provided sources." },
+      { time: "44–52", title: "Swap + test", detail: "A partner follows the prompt literally and marks the answer red, yellow, or green." },
+      { time: "52–58", title: "Fix one thing", detail: "Add one missing limit, example, fact source, or stop rule and check again." },
+      { time: "58–60", title: "Exit ticket", detail: "Name one clue that an AI answer needs a truth check." }
+    ]
+  },
+  {
+    number: "03",
+    title: "Protect People and Build Kindly",
+    outcome: "Learners remove private details, replace them with fictional data, and test whether an idea includes and respects people.",
+    materials: ["Privacy Backpack cards", "Fictional character cards", "Kindness and fairness checklist", "Kind Story Machine template", "Paper or team device"],
+    proof: "A repaired safe prompt and a kind story tested from one missing person’s viewpoint.",
+    timing: [
+      { time: "00–04", title: "Story + movement", detail: "Mime zipping private details into a backpack and drawing a ramp with a magic crayon." },
+      { time: "04–10", title: "Teacher demo", detail: "Repair a prompt containing a real school and address, then show one unfair story choice." },
+      { time: "10–44", title: "Build challenge", detail: "Teams sort privacy cards, rewrite unsafe prompts, and create a Kind Story Machine with fictional characters." },
+      { time: "44–52", title: "Swap + test", detail: "Another team asks: Who is included, who is missing, and could this embarrass or exclude someone?" },
+      { time: "52–58", title: "Fix one thing", detail: "Remove one unnecessary detail or add one kinder, more inclusive choice." },
+      { time: "58–60", title: "Exit ticket", detail: "Say one detail that always stays in the privacy backpack." }
+    ]
+  },
+  {
+    number: "04",
+    title: "Build in Tiny Loops",
+    outcome: "Learners create the three-question SAFE Quiz foundation and use a repeatable debugging loop.",
+    materials: ["SAFE Quiz starter", "Show–Find–Fix–Try Again cards", "Prepared broken example", "Three-case test sheet", "One team device"],
+    proof: "One playable quiz path, a reproduced bug, a small fix, and a passed repeat test.",
+    timing: [
+      { time: "00–04", title: "Story + movement", detail: "Cross an imaginary river one stepping stone at a time and point out the wobbly stone." },
+      { time: "04–10", title: "Teacher demo", detail: "Make a prepared bug appear, read its clue, change one cause, and rerun the same test." },
+      { time: "10–44", title: "Build challenge", detail: "Teams build three SAFE questions with choices, feedback, and a score, then test the main path." },
+      { time: "44–52", title: "Swap + test", detail: "Partners follow the three-case test sheet and record the exact step where anything breaks." },
+      { time: "52–58", title: "Fix one thing", detail: "Repair the smallest cause and repeat the same case before trying anything new." },
+      { time: "58–60", title: "Exit ticket", detail: "Point to the evidence that the fix worked." }
+    ]
+  },
+  {
+    number: "05",
+    title: "Build AI Safety Quest",
+    outcome: "Learners turn their quiz foundation into a complete branching safety game with guardrails and reflection.",
+    materials: ["Session 4 SAFE Quiz", "Quest storyboard", "Five-choice question bank", "Capstone checklist", "Icons or art cards", "One team device"],
+    proof: "A playable path with five decisions, three SAFE lessons, scoring, two endings, and a final reflection.",
+    timing: [
+      { time: "00–04", title: "Story + movement", detail: "Open the Robot City map and choose the player, mission, and safety tools." },
+      { time: "04–10", title: "Teacher demo", detail: "Connect one choice to feedback, a score change, and two possible next paths." },
+      { time: "10–44", title: "Build challenge", detail: "Teams expand the Session 4 quiz into five decisions, complete one path, then add the second ending." },
+      { time: "44–52", title: "Swap + test", detail: "A partner plays without explanation and checks clarity, safety, scoring, and both endings." },
+      { time: "52–58", title: "Fix one thing", detail: "Improve the most confusing choice or weakest safety lesson and replay that path." },
+      { time: "58–60", title: "Exit ticket", detail: "Explain where a human remains in control inside the game." }
+    ]
+  },
+  {
+    number: "06",
+    title: "Test, Ship, and Showcase",
+    outcome: "Learners use peer evidence to improve the Quest, complete a safe launch check, and explain their engineering choices.",
+    materials: ["Completed AI Safety Quest", "Peer-test sheet", "Launch checklist", "Engineer log", "Presentation screen", "Team device"],
+    proof: "A recorded peer test, one verified fix, a completed launch checklist, and a two-minute showcase.",
+    timing: [
+      { time: "00–04", title: "Story + movement", detail: "Test an imaginary bridge with a mouse, elephant, wind, and one careful checker robot." },
+      { time: "04–10", title: "Teacher demo", detail: "Model useful feedback: show the exact step, describe what happened, and name the expected result." },
+      { time: "10–44", title: "Build challenge", detail: "Teams rotate through peer tests, choose the highest-impact issue, fix it, and complete the launch checklist." },
+      { time: "44–52", title: "Swap + retest", detail: "The original tester repeats the failed path and signs the check only when the evidence is visible." },
+      { time: "52–58", title: "Showcase", detail: "Each team demonstrates one decision, one safety lesson, and the before-and-after fix." },
+      { time: "58–60", title: "Exit ticket", detail: "Finish: “We know our game is ready because…”" }
+    ]
+  }
+];
+
 const projects = [
   { symbol: "⌁", title: "Silly Prompt Repair Shop", copy: "Repair unclear prompts and name the missing GOAL ingredient.", time: "30–45 MIN", skill: "CLEAR INSTRUCTIONS" },
   { symbol: "⌕", title: "Hallucination Detective", copy: "Spot suspicious clues in fictional confident answers and plan how to verify them.", time: "40–50 MIN", skill: "FACT CHECKING" },
@@ -362,6 +455,28 @@ function renderProjects() {
     </article>`).join("");
 }
 
+function renderTeacherPlans() {
+  document.getElementById("teacher-session-list").innerHTML = teacherSessionPlans.map((session, index) => `
+    <details class="teacher-session-plan" ${index === 0 ? "open" : ""}>
+      <summary>
+        <span class="plan-number">${session.number}</span>
+        <span class="plan-heading"><strong>${session.title}</strong><span>${session.outcome}</span></span>
+        <span class="plan-duration">60 MIN</span>
+      </summary>
+      <div class="teacher-plan-body">
+        <div class="plan-brief">
+          <section><span>LEARNING OUTCOME</span><p>${session.outcome}</p></section>
+          <section><span>MATERIALS</span><ul>${session.materials.map((item) => `<li>${item}</li>`).join("")}</ul></section>
+          <section><span>LEARNER PROOF</span><p>${session.proof}</p></section>
+        </div>
+        <ol class="plan-timing" aria-label="Session ${Number(session.number)} minute-by-minute plan">
+          ${session.timing.map((step) => `
+            <li><time>${step.time}</time><div><strong>${step.title}</strong><p>${step.detail}</p></div></li>`).join("")}
+        </ol>
+      </div>
+    </details>`).join("");
+}
+
 function renderAdaptiveSyllabus() {
   const isExplorer = appState.track === "explorer";
   const trackLabel = isExplorer ? "Explorer adaptation" : "Builder adaptation";
@@ -583,6 +698,13 @@ document.addEventListener("click", async (event) => {
       showToast("Select the prompt text and copy it manually.");
     }
   }
+
+  if (event.target.closest("#toggle-teacher-plans")) {
+    const plans = [...document.querySelectorAll(".teacher-session-plan")];
+    const shouldOpen = plans.some((plan) => !plan.open);
+    plans.forEach((plan) => { plan.open = shouldOpen; });
+    event.target.closest("#toggle-teacher-plans").textContent = shouldOpen ? "Close all plans" : "Open all plans";
+  }
 });
 
 document.getElementById("menu-button").addEventListener("click", () => {
@@ -620,6 +742,7 @@ document.querySelectorAll("[data-capstone-check]").forEach((checkbox) => {
 renderMissionPath();
 renderMissions();
 renderProjects();
+renderTeacherPlans();
 updateTrack();
 initializeCapstoneChecks();
 

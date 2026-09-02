@@ -31,9 +31,13 @@ const checks = [
   [script.includes("const missions = ["), "mission data"],
   [script.includes("const questQuestions = ["), "playable quest data"],
   [script.includes("const adaptiveModules = ["), "adaptive teacher syllabus"],
+  [script.includes("const teacherSessionPlans = ["), "six teacher lesson plans"],
   [html.includes("Ages 10–12 design. The teacher operates."), "teacher Codex age note"],
+  [html.includes("Assign the same device every week"), "shared-device progress rule"],
+  [html.includes("Teacher preparation checklist"), "teacher equipment checklist"],
   [curriculum.includes("Format: 6 sessions, 60 minutes each"), "six-session curriculum"],
   [curriculum.includes("Special Codex access rule"), "downloadable Codex age rule"],
+  [curriculum.includes("Shared-device progress rule"), "downloadable device rule"],
   [(curriculum.match(/^### Session \d —/gmu) || []).length === 6, "six curriculum session plans"],
   [script.includes("localStorage"), "local-only progress"],
   [!html.includes("http://") && !html.includes("https://"), "no external page dependencies"]

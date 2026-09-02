@@ -75,7 +75,7 @@
           <p><strong>E</strong>veryone deserves kindness</p>
         </div>
 
-        <p class="privacy-note">Progress stays on this device. No account or personal details needed.</p>
+        <p class="privacy-note">Progress stays in this browser. Shared laptops should return to the same team each week. No account or personal details needed.</p>
       </aside>
 
       <div class="app-main">
@@ -88,9 +88,15 @@
             <span class="status-dot" aria-hidden="true"></span>
             <span id="current-view-label">Mission Control</span>
           </div>
-          <div class="track-switch" role="group" aria-label="Choose age track">
-            <button type="button" class="track-button is-active" data-track="explorer">Explorer <span>10–12</span></button>
-            <button type="button" class="track-button" data-track="builder">Builder <span>13–16</span></button>
+          <div class="topbar-actions">
+          <button class="teacher-shortcut" type="button" data-go="teacher" aria-label="Open Teacher Base">
+              <span aria-hidden="true">▤</span>
+              <span>Teacher Base</span>
+            </button>
+            <div class="track-switch" role="group" aria-label="Choose age track">
+              <button type="button" class="track-button is-active" data-track="explorer">Explorer <span>10–12</span></button>
+              <button type="button" class="track-button" data-track="builder">Builder <span>13–16</span></button>
+            </div>
           </div>
         </header>
 
@@ -331,6 +337,52 @@
                 </p>
               </div>
             </aside>
+
+            <div class="teacher-setup-grid">
+              <article class="surface teacher-setup-card">
+                <span class="eyebrow">WHAT YOU NEED</span>
+                <h2>Teacher preparation checklist</h2>
+                <ul class="setup-checklist">
+                  <li><span aria-hidden="true"></span><div><strong>Team devices</strong><p>One laptop or tablet for every pair or team of three.</p></div></li>
+                  <li><span aria-hidden="true"></span><div><strong>Teacher station</strong><p>One laptop and projector for stories and adult-operated AI demonstrations.</p></div></li>
+                  <li><span aria-hidden="true"></span><div><strong>Browser</strong><p>Current Chrome, Edge, Safari, or Firefox in normal mode—not private or incognito mode.</p></div></li>
+                  <li><span aria-hidden="true"></span><div><strong>Printouts</strong><p>GOAL prompt cards, SAFE cards, engineer logs, and peer-test sheets from the curriculum.</p></div></li>
+                  <li><span aria-hidden="true"></span><div><strong>Internet</strong><p>Required to open the hosted app and run a teacher Codex demo. Paper and offline builds can continue without it.</p></div></li>
+                  <li><span aria-hidden="true"></span><div><strong>Accounts</strong><p>No learner account is needed. Use one teacher-approved account only when demonstrating AI.</p></div></li>
+                </ul>
+              </article>
+
+              <article class="surface device-progress-card">
+                <span class="eyebrow">SHARED-DEVICE RULE</span>
+                <h2>Assign the same device every week</h2>
+                <p>
+                  Session completion and the Final Quest checklist are stored only in this browser on this device. They do
+                  not follow a learner to another laptop and will reset if browser storage is cleared.
+                </p>
+                <div class="device-rule">
+                  <strong>TEAM + DEVICE + BROWSER</strong>
+                  <span>Example: Team Orange → Laptop 07 → Chrome</span>
+                </div>
+                <ol class="device-steps">
+                  <li>Label each device and record which team uses it.</li>
+                  <li>Return the team to the same device and browser each session.</li>
+                  <li>Avoid private or incognito mode and do not clear site data during the course.</li>
+                  <li>Keep the paper engineer log as the backup record of learning.</li>
+                </ol>
+              </article>
+            </div>
+
+            <article class="surface teacher-plan-library">
+              <div class="adaptive-header">
+                <div>
+                  <span class="eyebrow">READY-TO-TEACH PLANS</span>
+                  <h2>Six complete 60-minute lesson plans</h2>
+                  <p>Each plan includes the outcome, materials, practical proof, and an exact classroom timeline.</p>
+                </div>
+                <button class="button button-secondary" id="toggle-teacher-plans" type="button">Open all plans</button>
+              </div>
+              <div class="teacher-session-list" id="teacher-session-list"></div>
+            </article>
 
             <article class="surface syllabus-overview">
               <div class="adaptive-header">

@@ -68,3 +68,22 @@ test("shows the teacher-only Codex age and consent note", () => {
   assert.match(curriculum, /Special Codex access rule/);
   assert.match(curriculum, /Learners do not create personal Codex accounts/);
 });
+
+test("provides quick Teacher Base access and six complete teaching plans", () => {
+  assert.match(html, /class="teacher-shortcut" type="button" data-go="teacher"/);
+  assert.match(html, /WHAT YOU NEED/);
+  assert.match(html, /Assign the same device every week/);
+  assert.match(html, /stored only in this browser on this device/);
+  assert.match(html, /teacher-session-list/);
+  assert.match(script, /const teacherSessionPlans = \[/);
+  const planSource = script.match(/const teacherSessionPlans = \[([\s\S]*?)\n\];/u)?.[1] || "";
+  assert.equal((planSource.match(/number: "/g) || []).length, 6);
+  for (const range of ["00–04", "04–10", "10–44", "44–52", "52–58", "58–60"]) {
+    assert.match(planSource, new RegExp(range));
+  }
+  assert.match(script, /LEARNING OUTCOME/);
+  assert.match(script, /MATERIALS/);
+  assert.match(script, /LEARNER PROOF/);
+  assert.match(curriculum, /What you need before class/);
+  assert.match(curriculum, /Shared-device progress rule/);
+});

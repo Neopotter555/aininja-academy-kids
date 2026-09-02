@@ -36,6 +36,19 @@ The larger goal is not to make children memorize technical words. It is to help 
 - **Every learner:** Never share account credentials or enter names, faces, voices, precise locations, secrets, health information, family information, or private schoolwork.
 - **Thailand workshops:** Collect written guardian permission and provide a clear privacy notice. Re-check the service's current age rules and local requirements before every cohort.
 
+### What you need before class
+
+- One laptop or tablet for every pair or team of three.
+- One teacher laptop and projector for stories and adult-operated AI demonstrations.
+- A current Chrome, Edge, Safari, or Firefox browser in normal mode, not private or incognito mode.
+- Printed GOAL prompt cards, SAFE cards, engineer logs, and peer-test sheets.
+- Internet access to open the hosted app and run a teacher-operated Codex demonstration. Paper activities and prepared offline builds can continue without internet.
+- No learner account. Use one teacher-approved AI account only when a demonstration is part of the session.
+
+### Shared-device progress rule
+
+The web app stores session completion and the Final Quest checklist only in the current browser on the current device. Progress does not follow a learner to another laptop and disappears if site data is cleared. Label each school device, assign it to the same team every week, use the same browser, avoid private or incognito mode, and keep the paper engineer log as the backup learning record.
+
 ### Two difficulty tracks
 
 Every class shares the same story and project. The depth changes by age.
