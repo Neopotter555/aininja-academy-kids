@@ -1238,10 +1238,44 @@ main {
 }
 
 .device-progress-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   border-color: #334a43;
   background:
     linear-gradient(145deg, rgba(94, 224, 161, 0.07), transparent 48%),
     var(--panel);
+}
+
+.device-progress-card::before,
+.device-progress-card::after {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  pointer-events: none;
+}
+
+.device-progress-card::before {
+  background: url("/assets/ai-ninja-teacher-classroom.png") center 72% / cover no-repeat;
+  opacity: 0.72;
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.device-progress-card::after {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(11, 16, 17, 0.98) 0%, rgba(11, 16, 17, 0.92) 34%, rgba(11, 16, 17, 0.66) 62%, rgba(8, 12, 13, 0.5) 100%),
+    linear-gradient(90deg, rgba(8, 13, 12, 0.86) 0%, rgba(8, 13, 12, 0.38) 60%, rgba(8, 13, 12, 0.16) 100%);
+}
+
+.device-progress-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.device-progress-card .device-steps {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.95);
 }
 
 .device-progress-card > p {

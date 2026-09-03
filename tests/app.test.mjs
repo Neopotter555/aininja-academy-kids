@@ -7,6 +7,7 @@ const script = await readFile(new URL("../app.js", import.meta.url), "utf8");
 const styles = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 const curriculum = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", import.meta.url), "utf8");
 const curriculumPdf = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf", import.meta.url));
+const teacherClassroomArtwork = await readFile(new URL("../assets/ai-ninja-teacher-classroom.png", import.meta.url));
 const vercel = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
 
 test("renders all primary learning surfaces", () => {
@@ -119,6 +120,14 @@ test("makes every teacher preparation item checkable and device-persistent", () 
   assert.match(script, /prepChecks: \[\]/);
   assert.match(script, /function initializePrepChecklist\(\)/);
   assert.match(script, /\[data-prep-check\]:checked/);
+});
+
+test("blends the AI Ninja classroom artwork into the Teacher Base guidance", () => {
+  assert.match(styles, /url\("\/assets\/ai-ninja-teacher-classroom\.png"\)/);
+  assert.match(styles, /\.device-progress-card::before/);
+  assert.match(styles, /\.device-progress-card::after/);
+  assert.equal(teacherClassroomArtwork.subarray(1, 4).toString(), "PNG");
+  assert.ok(teacherClassroomArtwork.length > 100000);
 });
 
 test("blends the supplied Robot City artwork into the Final Quest console", () => {
