@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const script = await readFile(new URL("../app.js", import.meta.url), "utf8");
+const styles = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 const curriculum = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.md", import.meta.url), "utf8");
 const curriculumPdf = await readFile(new URL("../curriculum/AI_ENGINEER_FOR_KIDS_CURRICULUM.pdf", import.meta.url));
 const vercel = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
@@ -110,6 +111,21 @@ test("provides quick Teacher Base access and six complete teaching plans", () =>
   assert.match(script, /LEARNER PROOF/);
   assert.match(curriculum, /What you need before class/);
   assert.match(curriculum, /Shared-device progress rule/);
+});
+
+test("makes every teacher preparation item checkable and device-persistent", () => {
+  assert.equal((html.match(/data-prep-check=/g) || []).length, 6);
+  assert.match(html, /id="reset-prep-checklist"/);
+  assert.match(script, /prepChecks: \[\]/);
+  assert.match(script, /function initializePrepChecklist\(\)/);
+  assert.match(script, /\[data-prep-check\]:checked/);
+});
+
+test("blends the supplied Robot City artwork into the Final Quest console", () => {
+  assert.match(styles, /url\("\/assets\/robot-city\.png"\)/);
+  assert.match(styles, /center 62% \/ cover no-repeat/);
+  assert.match(styles, /\.quest-screen::before/);
+  assert.match(styles, /text-shadow: 0 3px 24px/);
 });
 
 test("downloads a designed PDF curriculum instead of Markdown", () => {

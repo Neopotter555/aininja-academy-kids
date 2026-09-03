@@ -321,7 +321,8 @@ const questQuestions = [
 const defaultState = {
   track: "explorer",
   completed: [],
-  capstoneChecks: []
+  capstoneChecks: [],
+  prepChecks: []
 };
 
 let appState = loadState();
@@ -349,7 +350,8 @@ function loadState() {
       ...defaultState,
       ...stored,
       completed: migratedCompleted,
-      capstoneChecks: Array.isArray(stored?.capstoneChecks) ? stored.capstoneChecks : []
+      capstoneChecks: Array.isArray(stored?.capstoneChecks) ? stored.capstoneChecks : [],
+      prepChecks: Array.isArray(stored?.prepChecks) ? stored.prepChecks : []
     };
   } catch {
     return { ...defaultState };
@@ -635,6 +637,19 @@ function initializeCapstoneChecks() {
   updateCapstoneProgress();
 }
 
+function updatePrepChecklistProgress() {
+  const checked = document.querySelectorAll("[data-prep-check]:checked").length;
+  const total = document.querySelectorAll("[data-prep-check]").length;
+  document.getElementById("prep-checklist-progress").textContent = `${checked} of ${total} ready`;
+}
+
+function initializePrepChecklist() {
+  document.querySelectorAll("[data-prep-check]").forEach((checkbox) => {
+    checkbox.checked = appState.prepChecks.includes(checkbox.dataset.prepCheck);
+  });
+  updatePrepChecklistProgress();
+}
+
 document.addEventListener("click", async (event) => {
   const navButton = event.target.closest("[data-view]");
   if (navButton) navigate(navButton.dataset.view);
@@ -739,6 +754,21 @@ document.querySelectorAll("[data-capstone-check]").forEach((checkbox) => {
   });
 });
 
+document.querySelectorAll("[data-prep-check]").forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    appState.prepChecks = [...document.querySelectorAll("[data-prep-check]:checked")].map((item) => item.dataset.prepCheck);
+    saveState();
+    updatePrepChecklistProgress();
+  });
+});
+
+document.getElementById("reset-prep-checklist").addEventListener("click", () => {
+  appState.prepChecks = [];
+  saveState();
+  initializePrepChecklist();
+  showToast("Teacher preparation checklist reset.");
+});
+
 function setupLearningOrbit() {
   const canvas = document.getElementById("learning-orbit-canvas");
   if (!canvas || !canvas.getContext) return;
@@ -839,6 +869,7 @@ renderProjects();
 renderTeacherPlans();
 updateTrack();
 initializeCapstoneChecks();
+initializePrepChecklist();
 setupLearningOrbit();
 
 const initialView = window.location.hash.replace("#", "");

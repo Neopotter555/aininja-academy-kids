@@ -348,13 +348,17 @@
                 <span class="eyebrow">WHAT YOU NEED</span>
                 <h2>Teacher preparation checklist</h2>
                 <ul class="setup-checklist">
-                  <li><span aria-hidden="true"></span><div><strong>Team devices</strong><p>One laptop or tablet for every pair or team of three.</p></div></li>
-                  <li><span aria-hidden="true"></span><div><strong>Teacher station</strong><p>One laptop and projector for stories and adult-operated AI demonstrations.</p></div></li>
-                  <li><span aria-hidden="true"></span><div><strong>Browser</strong><p>Current Chrome, Edge, Safari, or Firefox in normal mode—not private or incognito mode.</p></div></li>
-                  <li><span aria-hidden="true"></span><div><strong>Printouts</strong><p>GOAL prompt cards, SAFE cards, engineer logs, and peer-test sheets from the curriculum.</p></div></li>
-                  <li><span aria-hidden="true"></span><div><strong>Internet</strong><p>Required to open the hosted app and run a teacher Codex demo. Paper and offline builds can continue without it.</p></div></li>
-                  <li><span aria-hidden="true"></span><div><strong>Accounts</strong><p>No learner account is needed. Use one teacher-approved account only when demonstrating AI.</p></div></li>
+                  <li><label><input type="checkbox" data-prep-check="devices" /><div><strong>Team devices</strong><p>One laptop or tablet for every pair or team of three.</p></div></label></li>
+                  <li><label><input type="checkbox" data-prep-check="station" /><div><strong>Teacher station</strong><p>One laptop and projector for stories and adult-operated AI demonstrations.</p></div></label></li>
+                  <li><label><input type="checkbox" data-prep-check="browser" /><div><strong>Browser</strong><p>Current Chrome, Edge, Safari, or Firefox in normal mode—not private or incognito mode.</p></div></label></li>
+                  <li><label><input type="checkbox" data-prep-check="printouts" /><div><strong>Printouts</strong><p>GOAL prompt cards, SAFE cards, engineer logs, and peer-test sheets from the curriculum.</p></div></label></li>
+                  <li><label><input type="checkbox" data-prep-check="internet" /><div><strong>Internet</strong><p>Required to open the hosted app and run a teacher Codex demo. Paper and offline builds can continue without it.</p></div></label></li>
+                  <li><label><input type="checkbox" data-prep-check="accounts" /><div><strong>Accounts</strong><p>No learner account is needed. Use one teacher-approved account only when demonstrating AI.</p></div></label></li>
                 </ul>
+                <div class="setup-checklist-footer">
+                  <span id="prep-checklist-progress" aria-live="polite">0 of 6 ready</span>
+                  <button class="text-button" id="reset-prep-checklist" type="button">Reset checklist</button>
+                </div>
               </article>
 
               <article class="surface device-progress-card">
